@@ -1,0 +1,2313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Professional Portfolio - Transform Your Brand with Award-Winning Solutions</title>
+    <meta name="description" content="Award-winning creative professional with 150+ successful projects. Transform your brand with proven expertise. 98% client satisfaction, 40% average engagement increase." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Morgan",
+        "jobTitle": "Creative Director & Brand Strategist",
+        "url": "https://alexmorgan.design",
+        "sameAs": [
+            "https://www.linkedin.com/in/hamza-sa%C3%AFdi-205115386/",
+            "https://behance.net/alexmorgan",
+            "https://dribbble.com/alexmorgan"
+        ]
+    }
+    </script>
+  
+  <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Ffreelancer3070back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  <style>
+    @keyframes underlineGrow {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    .heading-underline {
+      width: 0;
+      animation: underlineGrow 0.8s ease-out 0.3s forwards;
+    }
+    /* Skills & Expertise section column balancing */
+    @media (min-width: 1024px) {
+      .skills-expertise-grid {
+        align-items: stretch;
+      }
+      .portrait-container {
+        flex: 1 1 0;
+        min-height: 0;
+        aspect-ratio: auto !important;
+      }
+    }
+  </style>
+  </head>
+<body class="font-body">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-border z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="font-display text-2xl font-bold text-primary">
+                    Hamza Saidi
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#certifications" class="nav-link text-text-secondary hover:text-primary transition-250" data-section="certifications">Certifications</a>
+                    <a href="#case-studies" class="nav-link text-text-secondary hover:text-primary transition-250" data-section="case-studies">Case Studies</a>
+                    <a href="#skills" class="nav-link text-text-secondary hover:text-primary transition-250" data-section="skills">Services</a>
+                    <a href="#faqs" class="nav-link text-text-secondary hover:text-primary transition-250" data-section="faqs">FAQs</a>
+                    <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-250" data-section="contact">Contact</a>
+                    <a href="https://tidycal.com/hamzasaidi/consultation" target="_blank" rel="noopener noreferrer" id="schedule-button" class="btn-primary">Schedule Free Call</a>
+                </div>
+                <button class="md:hidden p-2" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 pt-4 border-t border-border">
+                <div class="flex flex-col space-y-4">
+                    <a href="#certifications" class="nav-link text-text-secondary hover:text-primary transition-250 py-2" data-section="certifications">Certifications</a>
+                    <a href="#case-studies" class="nav-link text-text-secondary hover:text-primary transition-250 py-2" data-section="case-studies">Case Studies</a>
+                    <a href="#skills" class="nav-link text-text-secondary hover:text-primary transition-250 py-2" data-section="skills">Services</a>
+                    <a href="#faqs" class="nav-link text-text-secondary hover:text-primary transition-250 py-2" data-section="faqs">FAQs</a>
+                    <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-250 py-2" data-section="contact">Contact</a>
+                    <a href="https://tidycal.com/hamzasaidi/consultation" target="_blank" rel="noopener noreferrer" id="schedule-button-mobile" class="btn-primary text-center py-2 mt-2">Schedule Free Call</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Schedule Menu Overlay -->
+    <div id="schedule-overlay" class="hidden fixed inset-0 bg-black/40 z-50"></div>
+    <div id="schedule-menu" class="hidden fixed z-50 top-28 right-6 w-[calc(100%-3rem)] max-w-sm bg-white rounded-2xl shadow-cta border border-border p-6 space-y-4">
+        <div class="flex items-center justify-between">
+            <h3 class="font-display text-xl font-semibold text-text-primary">Choose Meeting Length</h3>
+            <button type="button" id="schedule-close" class="text-text-secondary hover:text-text-primary transition-250" aria-label="Close schedule options">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <p class="text-text-secondary text-sm">Pick the conversation length that best fits your availability.</p>
+        <div class="space-y-3">
+            <a href="https://tidycal.com/hamzasaidi/15-minute-meeting" target="_blank" rel="noopener noreferrer" class="w-full block text-center bg-primary text-white rounded-xl py-3 font-semibold hover:bg-primary-700 transition-250">15 Minute Meeting</a>
+            <a href="https://tidycal.com/hamzasaidi/30-minute-meeting" target="_blank" rel="noopener noreferrer" class="w-full block text-center bg-primary text-white rounded-xl py-3 font-semibold hover:bg-primary-700 transition-250">30 Minute Meeting</a>
+            <a href="https://tidycal.com/hamzasaidi/60-minute-meeting" target="_blank" rel="noopener noreferrer" class="w-full block text-center bg-primary text-white rounded-xl py-3 font-semibold hover:bg-primary-700 transition-250">60 Minute Meeting</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-br from-surface-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h1 class="font-display text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
+                        Transform Your Workplace with 
+                        <span class="text-gradient">Modern Microsoft 365</span> 
+                        Solutions
+                    </h1>
+                    <p class="text-xl text-text-secondary mb-8 leading-relaxed">
+                        10+ years in IT & education • Microsoft & ITIL certified professional • 400+ staff and teachers trained on Microsoft 365 tools
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="#contact" class="btn-primary text-center">
+                            Schedule a Free Consultation
+                        </a>
+                        <a href="#certifications" class="btn-secondary bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white text-center py-3 px-6 rounded-lg font-semibold transition-250">
+                            See My Certifications
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="grid grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2" id="experience-counter"><p>+</p>10</div>
+                            <div class="text-sm text-text-secondary">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2" id="projects-counter">400</div>
+                            <div class="text-sm text-text-secondary">Staff & Teachers Trained</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2" id="satisfaction-counter">8</div>
+                            <div class="text-sm text-text-secondary">Professional Certifications</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <div class="relative w-[320px] md:w-[360px] lg:w-[400px]">
+                        <div class="w-full h-[440px] md:h-[500px] bg-blue-700 rounded-t-full rounded-b-3xl overflow-hidden flex items-end justify-center shadow-cta">
+                            <img src="../public/images/hamza-profile.png" alt="Alex Morgan - Creative Director" class="h-full w-auto object-cover" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        </div>
+                        <div class="absolute bottom-6 -right-4 bg-accent text-white p-4 rounded-lg shadow-cta">
+                            <div class="text-sm font-semibold">Microsoft 365 Expert</div>
+                            <div class="text-xs">Endpoint & Security Specialist</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-center text-2xl md:text-3xl font-semibold text-gray-900 mb-3">
+                Certifications & Professional Credentials
+            </h2>
+            <p class="text-center text-gray-600 mb-10">
+                Officially certified by Microsoft and ITIL to design, secure, and manage modern workplace and cloud environments.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative flex items-start gap-4 p-5 pr-16 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100">
+                        <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft 365 Certified: Administrator Expert</h3>
+                        <p class="text-xs text-gray-500 mt-1">Advanced administration of Microsoft 365 tenants, security, and compliance.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/hamzasadi-1592/credentials/66A924688CE05A85" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                    <button type="button" class="cert-eye-btn absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-blue-100 bg-blue-50 text-blue-600 flex items-center justify-center shadow-sm transition-colors duration-200 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-300" data-cert-id="ms-admin-expert" aria-label="View certificate">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.1 12.35s3.4-5.85 9.9-5.85 9.9 5.85 9.9 5.85-3.4 5.85-9.9 5.85-9.9-5.85-9.9-5.85z" />
+                            <circle cx="12" cy="12" r="2.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="group relative flex items-start gap-4 p-5 pr-16 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100">
+                        <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft 365 Certified: Endpoint Administrator Associate</h3>
+                        <p class="text-xs text-gray-500 mt-1">Managing and securing Windows devices with Intune, policies, and modern management.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/hamzasadi-1592/credentials/6702AB44E7060220" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                    <button type="button" class="cert-eye-btn absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-blue-100 bg-blue-50 text-blue-600 flex items-center justify-center shadow-sm transition-colors duration-200 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-300" data-cert-id="ms-endpoint-associate" aria-label="View certificate">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.1 12.35s3.4-5.85 9.9-5.85 9.9 5.85 9.9 5.85-3.4 5.85-9.9 5.85-9.9-5.85-9.9-5.85z" />
+                            <circle cx="12" cy="12" r="2.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="group relative flex items-start gap-4 p-5 pr-16 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100">
+                        <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft 365 Certified: Fundamentals (MS-900)</h3>
+                        <p class="text-xs text-gray-500 mt-1">Solid foundation in Microsoft 365 services, licensing, and cloud productivity concepts.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/HamzaSadi-1592/credentials/FD7CDF0CA06E6B6E" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                    <button type="button" class="cert-eye-btn absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-blue-100 bg-blue-50 text-blue-600 flex items-center justify-center shadow-sm transition-colors duration-200 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-300" data-cert-id="ms-900-fundamentals" aria-label="View certificate">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.1 12.35s3.4-5.85 9.9-5.85 9.9 5.85 9.9 5.85-3.4 5.85-9.9 5.85-9.9-5.85-9.9-5.85z" />
+                            <circle cx="12" cy="12" r="2.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="group relative flex items-start gap-4 p-5 pr-16 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100">
+                        <img src="../public/images/logos/azure-logo.svg" alt="Microsoft Azure logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+                        <p class="text-xs text-gray-500 mt-1">Core knowledge of Azure services, cloud concepts, security, and governance.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/hamzasadi-4854/credentials/7578CBF192F12128" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                    <button type="button" class="cert-eye-btn absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-blue-100 bg-blue-50 text-blue-600 flex items-center justify-center shadow-sm transition-colors duration-200 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-300" data-cert-id="az-900-fundamentals" aria-label="View certificate">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.1 12.35s3.4-5.85 9.9-5.85 9.9 5.85 9.9 5.85-3.4 5.85-9.9 5.85-9.9-5.85-9.9-5.85z" />
+                            <circle cx="12" cy="12" r="2.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="group relative flex items-start gap-4 p-5 pr-16 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100">
+                        <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft Security logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft Certified: Security, Compliance & Identity Fundamentals (SC-900)</h3>
+                        <p class="text-xs text-gray-500 mt-1">Understanding of Microsoft security, compliance, and identity solutions across cloud and hybrid.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/hamzasadi-4854/credentials/6D79BCA9420510B7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                    <button type="button" class="cert-eye-btn absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-blue-100 bg-blue-50 text-blue-600 flex items-center justify-center shadow-sm transition-colors duration-200 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-300" data-cert-id="sc-900-fundamentals" aria-label="View certificate">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.1 12.35s3.4-5.85 9.9-5.85 9.9 5.85 9.9 5.85-3.4 5.85-9.9 5.85-9.9-5.85-9.9-5.85z" />
+                            <circle cx="12" cy="12" r="2.5" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="group relative flex items-start gap-4 p-5 pr-16 rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1.5 hover:shadow-xl hover:border-blue-200">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-emerald-100">
+                        <img src="../public/images/logos/itil4-logo.svg" alt="ITIL 4 logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">ITIL® 4 Foundation – IT Service Management</h3>
+                        <p class="text-xs text-gray-500 mt-1">Best practices in IT service management: incident, change, and continual improvement.</p>
+                        <div class="mt-2">
+                            <a href="https://peoplecert.org/verify" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-700">
+                                <span>Verify on ITIL / PeopleCert</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 3h7v7" />
+                                    <path d="M10 14 21 3" />
+                                    <path d="M5 5v16h16" />
+                                </svg>
+                            </a>
+                            <p class="text-[11px] text-gray-400 mt-1">Verification code: GR671780444HS</p>
+                        </div>
+                    </div>
+                    <button type="button" class="cert-eye-btn absolute right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-blue-100 bg-blue-50 text-blue-600 flex items-center justify-center shadow-sm transition-colors duration-200 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-300" data-cert-id="itil4-foundation" aria-label="View certificate">
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.1 12.35s3.4-5.85 9.9-5.85 9.9 5.85 9.9 5.85-3.4 5.85-9.9 5.85-9.9-5.85-9.9-5.85z" />
+                            <circle cx="12" cy="12" r="2.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cert-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+        <div class="relative max-w-3xl w-full rounded-2xl bg-white p-4 sm:p-6 shadow-2xl">
+            <button type="button" class="absolute top-3 right-3 rounded-full bg-gray-100 p-2 text-gray-500 transition-colors duration-150 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary" data-close-modal aria-label="Close">
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <line x1="18" y1="6" x2="6" y2="18" stroke-linecap="round" />
+                    <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" />
+                </svg>
+            </button>
+            <img id="cert-modal-image" src="" alt="Certification preview" class="mx-auto max-h-[70vh] w-full rounded-xl object-contain" />
+        </div>
+    </div>
+
+    <!-- CertProofModal -->
+    <div id="cert-proof-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm px-4" role="dialog" aria-modal="true" aria-labelledby="cert-proof-modal-title">
+        <div class="relative max-w-4xl w-full rounded-2xl bg-white p-6 sm:p-8 shadow-2xl max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-[180ms]">
+            <button 
+                type="button" 
+                class="absolute top-4 right-4 rounded-full bg-gray-100 p-2 text-gray-500 transition-colors duration-150 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary" 
+                data-close-cert-proof-modal 
+                aria-label="Close certificates modal"
+            >
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <line x1="18" y1="6" x2="6" y2="18" stroke-linecap="round" />
+                    <line x1="6" y1="6" x2="18" y2="18" stroke-linecap="round" />
+                </svg>
+            </button>
+            
+            <h2 id="cert-proof-modal-title" class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">Certifications & Professional Credentials</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Microsoft 365 Certified: Administrator Expert -->
+                <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-shadow">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100 flex-shrink-0">
+                        <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1 flex-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft 365 Certified: Administrator Expert</h3>
+                        <p class="text-xs text-gray-500 mt-1">Advanced administration of Microsoft 365 tenants, security, and compliance.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/hamzasadi-1592/credentials/66A924688CE05A85" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Microsoft 365 Certified: Endpoint Administrator Associate -->
+                <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-shadow">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100 flex-shrink-0">
+                        <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1 flex-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft 365 Certified: Endpoint Administrator Associate</h3>
+                        <p class="text-xs text-gray-500 mt-1">Managing and securing Windows devices with Intune, policies, and modern management.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/hamzasadi-1592/credentials/6702AB44E7060220" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Microsoft 365 Certified: Fundamentals (MS-900) -->
+                <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-shadow">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100 flex-shrink-0">
+                        <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1 flex-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft 365 Certified: Fundamentals (MS-900)</h3>
+                        <p class="text-xs text-gray-500 mt-1">Solid foundation in Microsoft 365 services, licensing, and cloud productivity concepts.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/HamzaSadi-1592/credentials/FD7CDF0CA06E6B6E" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Microsoft Certified: Azure Fundamentals (AZ-900) -->
+                <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-shadow">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100 flex-shrink-0">
+                        <img src="../public/images/logos/azure-logo.svg" alt="Microsoft Azure logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1 flex-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+                        <p class="text-xs text-gray-500 mt-1">Core knowledge of Azure services, cloud concepts, security, and governance.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/hamzasadi-4854/credentials/7578CBF192F12128" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Microsoft Certified: Security, Compliance & Identity Fundamentals (SC-900) -->
+                <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-shadow">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-sky-100 flex-shrink-0">
+                        <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft Security logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1 flex-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">Microsoft Certified: Security, Compliance & Identity Fundamentals (SC-900)</h3>
+                        <p class="text-xs text-gray-500 mt-1">Understanding of Microsoft security, compliance, and identity solutions across cloud and hybrid.</p>
+                        <a href="https://learn.microsoft.com/en-us/users/hamzasadi-4854/credentials/6D79BCA9420510B7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-blue-600 hover:text-blue-700">
+                            <span>Verify on Microsoft Learn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 3h7v7" />
+                                <path d="M10 14 21 3" />
+                                <path d="M5 5v16h16" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- ITIL® 4 Foundation -->
+                <div class="flex items-start gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:shadow-md transition-shadow">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-sm ring-1 ring-emerald-100 flex-shrink-0">
+                        <img src="../public/images/logos/itil4-logo.svg" alt="ITIL 4 logo" class="h-7 w-7 object-contain" />
+                    </span>
+                    <div class="space-y-1 flex-1">
+                        <h3 class="font-semibold text-gray-900 text-sm">ITIL® 4 Foundation – IT Service Management</h3>
+                        <p class="text-xs text-gray-500 mt-1">Best practices in IT service management: incident, change, and continual improvement.</p>
+                        <div class="mt-2">
+                            <a href="https://peoplecert.org/verify" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-700">
+                                <span>Verify on ITIL / PeopleCert</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 3h7v7" />
+                                    <path d="M10 14 21 3" />
+                                    <path d="M5 5v16h16" />
+                                </svg>
+                            </a>
+                            <p class="text-[11px] text-gray-400 mt-1">Verification code: GR671780444HS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Value Proposition -->
+    <section class="py-20 section-surface" id="value-proposition">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-text-primary mb-6">
+                    Why Partner with a Certified Microsoft 365 Specialist?
+                </h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mt-6">
+                    Combining real-world IT expertise with Microsoft-certified solutions to build secure, productive, and future-ready digital workplaces.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="value-card bg-white p-8 rounded-xl border border-gray-100 shadow-portfolio hover:-translate-y-1 hover:shadow-xl hover:border-blue-100 transition-all duration-[600ms] ease-out group opacity-0 translate-y-5" data-delay="0">
+                    <div class="w-16 h-16 bg-primary-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white group-hover:scale-105 group-hover:-translate-y-0.5 transition-all duration-200 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="8" />
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M12 2v3" />
+                            <path d="M12 19v3" />
+                            <path d="M2 12h3" />
+                            <path d="M19 12h3" />
+                        </svg>
+                    </div>
+                    <span class="text-xs uppercase font-semibold tracking-widest text-blue-600 mb-2 block">01</span>
+                    <h3 class="font-display text-2xl font-semibold mb-4">Strategic Modern Workplace Planning</h3>
+                    <p class="text-text-secondary mb-6">End-to-end guidance on moving your organization to Microsoft 365, from licensing and governance to adoption strategies aligned with your business and users.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-250">
+                        <div class="text-sm text-primary font-semibold">Case Study Preview:</div>
+                        <div class="text-sm text-text-secondary">Developed a Microsoft 365 roadmap for an education institution, reducing unsupported tools and shadow IT by 40%.</div>
+                    </div>
+                </div>
+                
+                <div class="value-card bg-white p-8 rounded-xl border border-gray-100 shadow-portfolio hover:-translate-y-1 hover:shadow-xl hover:border-blue-100 transition-all duration-[600ms] ease-out group opacity-0 translate-y-5" data-delay="100">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white group-hover:scale-105 group-hover:-translate-y-0.5 transition-all duration-200 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3l7 3v6c0 4.2-2.7 7.4-7 8-4.3-.6-7-3.8-7-8V6l7-3z" />
+                            <path d="M9.5 12.5l2 2 3-3" />
+                        </svg>
+                    </div>
+                    <span class="text-xs uppercase font-semibold tracking-widest text-blue-600 mb-2 block">02</span>
+                    <h3 class="font-display text-2xl font-semibold mb-4">Technical Excellence & Secure Deployment</h3>
+                    <p class="text-text-secondary mb-6">Certified in Microsoft 365, Azure, and Endpoint management, ensuring device configuration, policy control, and data protection are seamless, scalable, and secure.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-250">
+                        <div class="text-sm text-primary font-semibold">Case Study Preview:</div>
+                        <div class="text-sm text-text-secondary">Implemented Intune and compliance policies for 300+ devices, cutting setup time by 60% and improving organization-wide security.</div>
+                    </div>
+                </div>
+                
+                <div class="value-card bg-white p-8 rounded-xl border border-gray-100 shadow-portfolio hover:-translate-y-1 hover:shadow-xl hover:border-blue-100 transition-all duration-[600ms] ease-out group opacity-0 translate-y-5" data-delay="200">
+                    <div class="w-16 h-16 bg-accent-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white group-hover:scale-105 group-hover:-translate-y-0.5 transition-all duration-200 ease-in-out">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <span class="text-xs uppercase font-semibold tracking-widest text-blue-600 mb-2 block">03</span>
+                    <h3 class="font-display text-2xl font-semibold mb-4">Proven Training & User Adoption Results</h3>
+                    <p class="text-text-secondary mb-6">Practical, scenario-based Microsoft 365 and Teams training for staff and teachers, ensuring adoption of tools that improve collaboration and daily workflows.</p>
+                    <div class="opacity-0 group-hover:opacity-100 transition-250">
+                        <div class="text-sm text-primary font-semibold">Case Study Preview:</div>
+                        <div class="text-sm text-text-secondary">Trained 400+ staff and educators on Microsoft 365 apps, achieving a 90% increase in active Teams and OneDrive usage.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase -->
+    <section class="py-20 bg-white" id="case-studies">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-text-primary">
+                    Featured IT Projects & Lab Work
+                </h2>
+                <div class="mt-3 h-1 w-16 bg-blue-500 mx-auto rounded-full"></div>
+                <p class="mt-6 text-xl text-slate-600 max-w-3xl mx-auto text-center">
+                    A selection of Microsoft 365, Intune, networking, and IT service management projects demonstrating real-world security, productivity, and user adoption improvements.
+                </p>
+                
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="filter-btn active px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-primary text-white border-b-2 border-blue-600" data-filter="all">
+                        All Projects
+                    </button>
+                    <button class="filter-btn px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-surface-100 text-slate-500 hover:text-slate-800" data-filter="branding">
+                        Microsoft 365 & Intune
+                    </button>
+                    <button class="filter-btn px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-surface-100 text-slate-500 hover:text-slate-800" data-filter="web-design">
+                        Networking & Lab
+                    </button>
+                    <button class="filter-btn px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-surface-100 text-slate-500 hover:text-slate-800" data-filter="marketing">
+                        IT Service Management
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                <div class="portfolio-item branding" data-category="branding" data-aos="fade-up" data-aos-delay="0" style="opacity: 0; transform: translateY(20px);">
+                    <div class="portfolio-card group cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out" onclick="openModal('modal1')">
+                        <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                            <img src="../public/images/projects/Microsoft-365-Adoption-for-Education-Staff.png" alt="Microsoft 365 Adoption for Education Staff" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 ease-out" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold leading-snug mb-2">Microsoft 365 Adoption for Education Staff</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">Planned and delivered Microsoft 365 and Teams training for more than 400 staff members, supporting a larger digital transformation across the institution.</p>
+                            <div class="flex flex-col">
+                                <span class="text-[13px] font-medium text-orange-500 mt-2">400+ staff trained on Microsoft 365</span>
+                                <span class="mt-1 inline-flex items-center text-xs text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    View case study
+                                    <svg class="ml-1 h-3 w-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item web-design" data-category="web-design" data-aos="fade-up" data-aos-delay="100" style="opacity: 0; transform: translateY(20px);">
+                    <div class="portfolio-card group cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out" onclick="openModal('modal2')">
+                        <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                            <img src="../public/images/projects/Secure-Microsoft-365-Test-Tenant-Policies.png" alt="Secure Microsoft 365 Test Tenant & Policies" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 ease-out" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold leading-snug mb-2">Secure Microsoft 365 Test Tenant & Policies</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">Configured a dedicated Microsoft 365 test tenant with user management, MFA, and Conditional Access rules to validate security and compliance scenarios before production.</p>
+                            <div class="flex flex-col">
+                                <span class="text-[13px] font-medium text-orange-500 mt-2">MFA & Conditional Access enforced for all test users</span>
+                                <span class="mt-1 inline-flex items-center text-xs text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    View case study
+                                    <svg class="ml-1 h-3 w-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item marketing" data-category="marketing" data-aos="fade-up" data-aos-delay="200" style="opacity: 0; transform: translateY(20px);">
+                    <div class="portfolio-card group cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out" onclick="openModal('modal3')">
+                        <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                            <img src="../public/images/projects/Intune-Windows-Autopilot-Zero-Touch-Setup.png" alt="Intune & Windows Autopilot Zero-Touch Setup" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 ease-out" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold leading-snug mb-2">Intune & Windows Autopilot Zero-Touch Setup</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">Implemented Intune enrollment, configuration profiles, and Windows Autopilot for hands-off device provisioning, including app deployment and patch management.</p>
+                            <div class="flex flex-col">
+                                <span class="text-[13px] font-medium text-orange-500 mt-2">100% automated Windows device onboarding</span>
+                                <span class="mt-1 inline-flex items-center text-xs text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    View case study
+                                    <svg class="ml-1 h-3 w-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item branding" data-category="branding" data-aos="fade-up" data-aos-delay="300" style="opacity: 0; transform: translateY(20px);">
+                    <div class="portfolio-card group cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out" onclick="openModal('modal4')">
+                        <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                            <img src="../public/images/projects/Multi-Switch-Networking-Lab-with-Synology-NAS.png" alt="Multi-Switch Networking Lab with Synology NAS" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 ease-out" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold leading-snug mb-2">Multi-Switch Networking Lab with Synology NAS</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">Designed and tested a home lab environment with routers, switches, VLANs, VLAN segmentation, and a Synology NAS providing backup, file services, and virtual testing infrastructure.</p>
+                            <div class="flex flex-col">
+                                <span class="text-[13px] font-medium text-orange-500 mt-2">Resilient lab with centralized NAS backups</span>
+                                <span class="mt-1 inline-flex items-center text-xs text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    View case study
+                                    <svg class="ml-1 h-3 w-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item web-design" data-category="web-design" data-aos="fade-up" data-aos-delay="400" style="opacity: 0; transform: translateY(20px);">
+                    <div class="portfolio-card group cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out" onclick="openModal('modal5')">
+                        <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                            <img src="../public/images/projects/SharePoint-Resource-Hub-for-800+-Teachers.png" alt="SharePoint Resource Hub for 800+ Teachers" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 ease-out" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold leading-snug mb-2">SharePoint Resource Hub for 800+ Teachers</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">Built an internal SharePoint site where teachers can access shared resources, policies, and training material, improving collaboration across multiple schools.</p>
+                            <div class="flex flex-col">
+                                <span class="text-[13px] font-medium text-orange-500 mt-2">800+ educators connected through SharePoint</span>
+                                <span class="mt-1 inline-flex items-center text-xs text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    View case study
+                                    <svg class="ml-1 h-3 w-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item marketing" data-category="marketing" data-aos="fade-up" data-aos-delay="500" style="opacity: 0; transform: translateY(20px);">
+                    <div class="portfolio-card group cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out" onclick="openModal('modal6')">
+                        <div class="aspect-w-16 aspect-h-12 overflow-hidden">
+                            <img src="../public/images/projects/ServiceNow-ITIL-Service-Desk-Workflows.png" alt="ServiceNow ITIL Service Desk Workflows" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 ease-out" loading="lazy" />
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold leading-snug mb-2">ServiceNow ITIL Service Desk Workflows</h3>
+                            <p class="text-sm text-slate-600 leading-relaxed mb-4">Used a ServiceNow demo instance to design and practice incident, request, and change workflows aligned with ITIL v4, including SLAs and a knowledge base.</p>
+                            <div class="flex flex-col">
+                                <span class="text-[13px] font-medium text-orange-500 mt-2">End-to-end incidents aligned with ITIL v4</span>
+                                <span class="mt-1 inline-flex items-center text-xs text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                    View case study
+                                    <svg class="ml-1 h-3 w-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <!--
+    <section class="py-20 section-surface" id="testimonials">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-text-primary mb-6">
+                    What Clients Say
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Real results from real partnerships
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-portfolio">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2787&auto=format&fit=crop" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <div class="font-semibold text-text-primary">Sarah Johnson</div>
+                            <div class="text-sm text-text-secondary">CEO, TechStart</div>
+                        </div>
+                        <div class="ml-auto">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2939&auto=format&fit=crop" alt="LinkedIn Verified" class="w-6 h-6" />
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary mb-4">
+                        "Alex transformed our brand identity completely. The new design increased our brand recognition by 40% and helped us secure $500K in Series A funding."
+                    </p>
+                    <div class="text-sm text-accent font-semibold">ROI: +$500K funding secured</div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-portfolio">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <div class="font-semibold text-text-primary">Michael Chen</div>
+                            <div class="text-sm text-text-secondary">Marketing Director, RetailCorp</div>
+                        </div>
+                        <div class="ml-auto">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2939&auto=format&fit=crop" alt="LinkedIn Verified" class="w-6 h-6" />
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary mb-4">
+                        "Our e-commerce conversion rate increased by 65% after Alex redesigned our platform. The user experience is now seamless and intuitive."
+                    </p>
+                    <div class="text-sm text-accent font-semibold">ROI: +$2.3M additional revenue</div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-portfolio">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop" alt="Emily Rodriguez" class="w-12 h-12 rounded-full object-cover mr-4" />
+                        <div>
+                            <div class="font-semibold text-text-primary">Emily Rodriguez</div>
+                            <div class="text-sm text-text-secondary">Founder, GreenEats</div>
+                        </div>
+                        <div class="ml-auto">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?q=80&w=2939&auto=format&fit=crop" alt="LinkedIn Verified" class="w-6 h-6" />
+                        </div>
+                    </div>
+                    <div class="flex mb-4">
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary mb-4">
+                        "The restaurant branding Alex created perfectly captures our farm-to-table philosophy. Customer retention increased by 85% since the rebrand."
+                    </p>
+                    <div class="text-sm text-accent font-semibold">ROI: +85% customer retention</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Services & Pricing -->
+    <!--
+    <section class="py-20 bg-white" id="services">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-text-primary mb-6">
+                    Services & Investment
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Transparent pricing for professional creative solutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Essential Package -->
+                 <!--
+                <div class="bg-white border-2 border-border rounded-xl p-8 hover:border-primary transition-250">
+                    <div class="text-center mb-8">
+                        <h3 class="font-display text-2xl font-semibold mb-4">Essential</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$2,500</div>
+                        <div class="text-text-secondary">Perfect for startups</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Logo design & brand guidelines
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Business card design
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            2 revision rounds
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            2-week delivery
+                        </li>
+                    </ul>
+                    <a href="#contact" class="w-full btn-primary block text-center">Get Started</a>
+                </div>
+            -->
+             
+                <!-- Professional Package -->
+                 <!-- 
+                <div class="bg-white border-2 border-primary rounded-xl p-8 relative transform scale-105 shadow-cta">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-accent text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                    <div class="text-center mb-8">
+                        <h3 class="font-display text-2xl font-semibold mb-4">Professional</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$7,500</div>
+                        <div class="text-text-secondary">For growing businesses</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Complete brand identity system
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Website design (5 pages)
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Marketing materials suite
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            3 revision rounds
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            4-week delivery
+                        </li>
+                    </ul>
+                    <a href="#contact" class="w-full btn-accent block text-center">Get Started</a>
+                </div>
+            -->
+                <!-- Enterprise Package -->
+                 <!-- 
+                <div class="bg-white border-2 border-border rounded-xl p-8 hover:border-primary transition-250">
+                    <div class="text-center mb-8">
+                        <h3 class="font-display text-2xl font-semibold mb-4">Enterprise</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$15,000</div>
+                        <div class="text-text-secondary">For established companies</div>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Full brand strategy & positioning
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Custom website development
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Comprehensive marketing campaign
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Unlimited revisions
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-success mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            6-week delivery + ongoing support
+                        </li>
+                    </ul>
+                    <a href="#contact" class="w-full btn-primary block text-center">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Skills & Expertise -->
+    <section class="py-20 section-surface" id="skills">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-text-primary mb-6">
+                    Skills & Expertise
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Technical proficiency backed by industry certifications
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch skills-expertise-grid">
+                <div class="flex flex-col">
+                    <h3 class="font-display text-2xl font-semibold mb-8">Technical Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Microsoft 365 & Intune Architecture</span>
+                                <span class="text-primary font-semibold">95%</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-3">
+                                <div class="bg-primary h-3 rounded-full skill-bar" data-percentage="95" style="width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-text-secondary mt-2">Design of multi-site Modern Workplace environments, licensing, baselines, and best practices.</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Endpoint Security & Compliance (Intune + Defender + Conditional Access)</span>
+                                <span class="text-primary font-semibold">92%</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-3">
+                                <div class="bg-primary h-3 rounded-full skill-bar" data-percentage="92" style="width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-text-secondary mt-2">Compliance policies, identity protection, and endpoint risk reduction.</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Windows Autopilot & Zero-Touch Provisioning</span>
+                                <span class="text-primary font-semibold">90%</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-3">
+                                <div class="bg-primary h-3 rounded-full skill-bar" data-percentage="90" style="width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-text-secondary mt-2">Automated device setup via profiles and standardized deployment templates.</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Identity & Access Management (Microsoft Entra ID)</span>
+                                <span class="text-primary font-semibold">90%</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-3">
+                                <div class="bg-primary h-3 rounded-full skill-bar" data-percentage="90" style="width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-text-secondary mt-2">MFA, Conditional Access, and user lifecycle management.</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Collaboration & Adoption (Teams / SharePoint / OneDrive)</span>
+                                <span class="text-primary font-semibold">88%</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-3">
+                                <div class="bg-primary h-3 rounded-full skill-bar" data-percentage="88" style="width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-text-secondary mt-2">Governance, team templates, and configuration automation for faster adoption.</p>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Automation & Scripting (PowerShell + Graph)</span>
+                                <span class="text-primary font-semibold">85%</span>
+                            </div>
+                            <div class="w-full bg-surface-200 rounded-full h-3">
+                                <div class="bg-primary h-3 rounded-full skill-bar" data-percentage="85" style="width: 0%"></div>
+                            </div>
+                            <p class="text-sm text-text-secondary mt-2">Automating policies, compliance reports, and batch operations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col h-full">
+                    <!-- CertProofPanel -->
+                    <div class="cert-proof-panel bg-white rounded-xl shadow-subtle p-6 lg:p-7 opacity-0 translate-y-[30px] transition-all duration-200 ease-out flex flex-col h-full" style="max-width: 100%;">
+                        <!-- Portrait -->
+                        <div class="mb-4 portrait-container relative rounded-xl shadow-md overflow-hidden bg-[#F7F9FC] w-full aspect-[1/1.2] md:aspect-[3/4] lg:flex-1 min-h-0">
+                            <div class="absolute inset-0 flex flex-col portrait-safe-area">
+                                <div class="flex-1 flex items-start justify-center min-h-0">
+                                    <img 
+                                        src="../public/images/hamza-profile-2.png" 
+                                        alt="Portrait of Hamza Saidi, Microsoft 365 & ITIL certified specialist" 
+                                        class="portrait-image w-auto h-full max-w-full object-contain portrait-scaled"
+                                        style="max-width: 1200px; opacity: 0; transition: opacity 220ms ease-out, transform 220ms ease-out; object-position: center top;"
+                                        loading="lazy"
+                                        width="640"
+                                        height="800"
+                                        onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'640\' height=\'800\'%3E%3Cdefs%3E%3ClinearGradient id=\'grad\' x1=\'0%25\' y1=\'0%25\' x2=\'100%25\' y2=\'100%25\'%3E%3Cstop offset=\'0%25\' style=\'stop-color:%233b82f6;stop-opacity:1\' /%3E%3Cstop offset=\'100%25\' style=\'stop-color:%231e40af;stop-opacity:1\' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=\'640\' height=\'800\' fill=\'url(%23grad)\'/%3E%3C/svg%3E';"
+                                    />
+                                </div>
+                            </div>
+                            <style>
+                                .portrait-safe-area {
+                                    padding-top: 12%;
+                                    padding-bottom: 0;
+                                }
+                                @media (min-width: 768px) {
+                                    .portrait-safe-area {
+                                        padding-top: 10%;
+                                    }
+                                }
+                                @media (min-width: 1024px) {
+                                    .portrait-safe-area {
+                                        padding-top: 8%;
+                                    }
+                                }
+                                /* Enlarge portrait with responsive scaling */
+                                .portrait-scaled {
+                                    transform: scale(1.1) !important;
+                                }
+                                @media (min-width: 768px) {
+                                    .portrait-scaled {
+                                        transform: scale(1.15) !important;
+                                    }
+                                }
+                                @media (min-width: 1024px) {
+                                    .portrait-scaled {
+                                        transform: scale(1.2) !important;
+                                    }
+                                }
+                                /* Ensure portrait container clips bottom but protects top */
+                                .portrait-container {
+                                    overflow: hidden;
+                                }
+                                /* Position scaled image to favor top visibility - scale from upper center */
+                                .portrait-container .portrait-scaled {
+                                    transform-origin: center 30%;
+                                }
+                                @media (min-width: 768px) {
+                                    .portrait-container .portrait-scaled {
+                                        transform-origin: center 35%;
+                                    }
+                                }
+                                @media (min-width: 1024px) {
+                                    .portrait-container .portrait-scaled {
+                                        transform-origin: center 40%;
+                                    }
+                                }
+                            </style>
+                        </div>
+                        
+                        <!-- Ribbon -->
+                        <div class="text-center mb-4">
+                            <p class="text-sm font-semibold text-blue-700">Officially certified by Microsoft & ITIL®</p>
+                        </div>
+                        
+                        <!-- Badge Row -->
+                        <div class="flex flex-wrap justify-center gap-3 mb-4" aria-label="Open certificate verification">
+                            <a 
+                                href="https://learn.microsoft.com/en-us/users/hamzasadi-1592/credentials/66A924688CE05A85" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="cert-badge w-12 h-12 rounded-lg bg-white shadow-sm ring-1 ring-sky-100 flex items-center justify-center hover:scale-105 transition-transform duration-[120ms]"
+                                title="Microsoft 365 Certified: Administrator Expert"
+                                aria-label="Verify Microsoft 365 Certified: Administrator Expert"
+                            >
+                                <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                            </a>
+                            <a 
+                                href="https://learn.microsoft.com/en-us/users/hamzasadi-1592/credentials/6702AB44E7060220" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="cert-badge w-12 h-12 rounded-lg bg-white shadow-sm ring-1 ring-sky-100 flex items-center justify-center hover:scale-105 transition-transform duration-[120ms]"
+                                title="Microsoft 365 Certified: Endpoint Administrator Associate"
+                                aria-label="Verify Microsoft 365 Certified: Endpoint Administrator Associate"
+                            >
+                                <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                            </a>
+                            <a 
+                                href="https://learn.microsoft.com/en-us/users/HamzaSadi-1592/credentials/FD7CDF0CA06E6B6E" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="cert-badge w-12 h-12 rounded-lg bg-white shadow-sm ring-1 ring-sky-100 flex items-center justify-center hover:scale-105 transition-transform duration-[120ms]"
+                                title="Microsoft 365 Certified: Fundamentals (MS-900)"
+                                aria-label="Verify Microsoft 365 Certified: Fundamentals (MS-900)"
+                            >
+                                <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft 365 logo" class="h-7 w-7 object-contain" />
+                            </a>
+                            <a 
+                                href="https://learn.microsoft.com/en-us/users/hamzasadi-4854/credentials/7578CBF192F12128" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="cert-badge w-12 h-12 rounded-lg bg-white shadow-sm ring-1 ring-sky-100 flex items-center justify-center hover:scale-105 transition-transform duration-[120ms]"
+                                title="Microsoft Certified: Azure Fundamentals (AZ-900)"
+                                aria-label="Verify Microsoft Certified: Azure Fundamentals (AZ-900)"
+                            >
+                                <img src="../public/images/logos/azure-logo.svg" alt="Microsoft Azure logo" class="h-7 w-7 object-contain" />
+                            </a>
+                            <a 
+                                href="https://learn.microsoft.com/en-us/users/hamzasadi-4854/credentials/6D79BCA9420510B7" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="cert-badge w-12 h-12 rounded-lg bg-white shadow-sm ring-1 ring-sky-100 flex items-center justify-center hover:scale-105 transition-transform duration-[120ms]"
+                                title="Microsoft Certified: Security, Compliance & Identity Fundamentals (SC-900)"
+                                aria-label="Verify Microsoft Certified: Security, Compliance & Identity Fundamentals (SC-900)"
+                            >
+                                <img src="../public/images/logos/microsoft-365-logo.svg" alt="Microsoft Security logo" class="h-7 w-7 object-contain" />
+                            </a>
+                            <a 
+                                href="https://peoplecert.org/verify" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="cert-badge w-12 h-12 rounded-lg bg-white shadow-sm ring-1 ring-emerald-100 flex items-center justify-center hover:scale-105 transition-transform duration-120"
+                                title="ITIL® 4 Foundation – IT Service Management"
+                                aria-label="Verify ITIL® 4 Foundation – IT Service Management"
+                            >
+                                <img src="../public/images/logos/itil4-logo.svg" alt="ITIL 4 logo" class="h-7 w-7 object-contain" />
+                            </a>
+                        </div>
+                        
+                        <!-- Trust Bar -->
+                        <div class="text-center mb-4">
+                            <p class="text-xs text-text-secondary">Verified on Microsoft Learn & PeopleCert</p>
+                        </div>
+                        
+                        <!-- CTA Button -->
+                        <button 
+                            type="button" 
+                            id="view-all-certs-btn"
+                            class="w-full btn-primary text-center py-3 rounded-lg font-semibold transition-colors duration-200 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                        >
+                            View All Certificates
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white" id="faqs">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-text-primary mb-6">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Answers to the most common questions about Microsoft 365, Intune, and IT Service projects
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="border border-border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-text-primary hover:bg-surface-50 transition-250 flex items-center justify-between" onclick="toggleFAQ(1)">
+                        What's included in your project approach?
+                        <svg class="w-5 h-5 transform transition-250" id="faq-icon-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-text-secondary" id="faq-content-1">
+                        Each engagement starts with a discovery session to understand your environment and goals. I then prepare a technical plan covering architecture, security, compliance, and deployment. Deliverables typically include documentation, implementation steps, and end-user enablement.
+                    </div>
+                </div>
+                
+                <div class="border border-border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-text-primary hover:bg-surface-50 transition-250 flex items-center justify-between" onclick="toggleFAQ(2)">
+                        How long does a typical Microsoft 365 or Intune deployment take?
+                        <svg class="w-5 h-5 transform transition-250" id="faq-icon-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-text-secondary" id="faq-content-2">
+                        Project duration varies by scope, small tenant setups or Intune rollouts take 1–2 weeks, while full enterprise implementations (including Endpoint Security, Conditional Access, and automation) can take 4–8 weeks.
+                    </div>
+                </div>
+                
+                <div class="border border-border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-text-primary hover:bg-surface-50 transition-250 flex items-center justify-between" onclick="toggleFAQ(3)">
+                        Do you offer post-implementation support?
+                        <svg class="w-5 h-5 transform transition-250" id="faq-icon-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-text-secondary" id="faq-content-3">
+                        Yes. After deployment, I provide monitoring, performance review, and optimization sessions. Clients can choose between short-term follow-up or a recurring monthly support model.
+                    </div>
+                </div>
+                
+                <div class="border border-border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-text-primary hover:bg-surface-50 transition-250 flex items-center justify-between" onclick="toggleFAQ(4)">
+                        What if we already have an IT team?
+                        <svg class="w-5 h-5 transform transition-250" id="faq-icon-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-text-secondary" id="faq-content-4">
+                        I frequently collaborate with in-house IT staff. My role can adapt, whether leading full implementation or providing specialized assistance in areas such as Conditional Access, Autopilot configuration, or Microsoft 365 security posture review.
+                    </div>
+                </div>
+                
+                <div class="border border-border rounded-lg">
+                    <button class="w-full px-6 py-4 text-left font-semibold text-text-primary hover:bg-surface-50 transition-250 flex items-center justify-between" onclick="toggleFAQ(5)">
+                        Do you work with international clients?
+                        <svg class="w-5 h-5 transform transition-250" id="faq-icon-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-text-secondary" id="faq-content-5">
+                        Absolutely. Most projects are delivered remotely with secure collaboration through Microsoft Teams and Azure DevOps. I've successfully supported clients across Europe, North Africa, and the Middle East.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-20 section-surface" id="contact">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl font-bold text-text-primary mb-6">
+                    Start Your Project Today
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Ready to enhance your IT environment?<br>Let's discuss how I can help optimize your Microsoft 365 ecosystem, Intune management, and service workflows.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6" id="contact-form">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-text-primary mb-2">Name *</label>
+                                <input type="text" name="name" required class="form-input" placeholder="Your full name" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-text-primary mb-2">Email *</label>
+                                <input type="email" name="email" required class="form-input" placeholder="your@email.com" />
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-text-primary mb-2">Message / Project Details *</label>
+                            <textarea name="message" rows="6" required class="form-input" placeholder="Tell me about your project, goals, and any specific requirements..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full btn-accent">
+                            Send Project Inquiry
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-display text-2xl font-semibold mb-6">Alternative Contact Methods</h3>
+                        
+                        <div class="space-y-4">
+                            <a href="tel:+32497782826" class="flex items-center p-4 bg-white rounded-lg shadow-subtle hover:shadow-portfolio transition-250">
+                                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Call Directly</div>
+                                    <div class="text-sm text-text-secondary">+32 497 78 28 26</div>
+                                    <div class="text-xs text-text-secondary mt-1">Available for business inquiries and project discussions.</div>
+                                </div>
+                            </a>
+                            
+                            <a href="https://wa.me/32497782826" class="flex items-center p-4 bg-white rounded-lg shadow-subtle hover:shadow-portfolio transition-250">
+                                <div class="w-12 h-12 bg-success-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">WhatsApp</div>
+                                    <div class="text-sm text-text-secondary">Quick responses for IT support requests and consultations.</div>
+                                </div>
+                            </a>
+                            
+                            <div class="flex items-center p-4 bg-white rounded-lg shadow-subtle">
+                                <div class="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Schedule Consultation</div>
+                                    <div class="text-sm text-text-secondary">Book a free 30-minute session to define your project goals and timeline.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-display text-2xl font-semibold mb-6">Connect on Social</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/hamza-sa%C3%AFdi-205115386/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white hover:bg-primary-700 transition-250">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="font-display text-2xl font-bold mb-4">Hamza Saïdi</div>
+                    <p class="text-gray-300 mb-2 font-semibold">Microsoft 365 & Endpoint Management Specialist</p>
+                    <p class="text-gray-300 mb-4">
+                        Helping organizations secure and optimize their Microsoft 365 and Intune environments through modern identity management, automation, and user-adoption enablement.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/hamza-sa%C3%AFdi-205115386/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-250">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#skills" class="hover:text-white transition-250">Microsoft 365 & Intune Architecture</a></li>
+                        <li><a href="#skills" class="hover:text-white transition-250">Endpoint Security & Compliance (Intune + Defender + Conditional Access)</a></li>
+                        <li><a href="#skills" class="hover:text-white transition-250">Windows Autopilot & Zero-Touch Provisioning</a></li>
+                        <li><a href="#skills" class="hover:text-white transition-250">Identity & Access Management (Entra ID)</a></li>
+                        <li><a href="#skills" class="hover:text-white transition-250">Collaboration & Adoption (Teams / SharePoint / OneDrive)</a></li>
+                        <li><a href="#skills" class="hover:text-white transition-250">Automation & Scripting (PowerShell + Graph API)</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Navigation</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#case-studies" class="hover:text-white transition-250">Portfolio</a></li>
+                        <li><a href="#skills" class="hover:text-white transition-250">Services</a></li>
+                        <li><a href="#case-studies" class="hover:text-white transition-250">Case Studies</a></li>
+                        <li><a href="#certifications" class="hover:text-white transition-250">Certifications</a></li>
+                        <li><a href="#faqs" class="hover:text-white transition-250">FAQs</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-250">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-250">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4 text-white">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>hamza.saidi@outlook.be</li>
+                        <li>+32 497 78 28 26</li>
+                        <li>Sint-Niklaas, Belgium</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+                <p>&copy; 2025 Hamza Saïdi. All Rights Reserved.</p>
+                <p class="mt-2 text-sm">Certified by Microsoft & ITIL - Verify on Microsoft Learn and PeopleCert.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="font-display text-3xl font-bold">Microsoft 365 Adoption for Education Staff</h3>
+                    <button onclick="closeModal('modal1')" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <img src="../public/images/projects/Microsoft-365-Adoption-for-Education-Staff.png" alt="Microsoft 365 Adoption for Education Staff" class="w-full h-64 object-cover rounded-lg mb-6" />
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-xl mb-4">Project Overview</h4>
+                        <p class="text-text-secondary mb-4">Planned and delivered a Microsoft 365 and Teams adoption program for an education institution. The project focused on training staff on core apps (Outlook, OneDrive, Teams, SharePoint) and helping them integrate these tools into their daily teaching and administration workflows.</p>
+                        <div class="space-y-2">
+                            <div><strong>Client:</strong> Education institution (multi-site)</div>
+                            <div><strong>Environment:</strong> Microsoft 365, Teams, OneDrive, SharePoint</div>
+                            <div><strong>Timeline:</strong> Several training waves across the academic year</div>
+                            <div><strong>Scope:</strong> Staff awareness, hands-on workshops, Q&A sessions, follow-up support</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-xl mb-4">Results Achieved</h4>
+                        <div class="space-y-4">
+                            <div class="bg-success-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-success">400+</div>
+                                <div class="text-sm">Staff and teachers trained on Microsoft 365 tools</div>
+                            </div>
+                            <div class="bg-primary-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-primary">Higher adoption</div>
+                                <div class="text-sm">Significant increase in daily use of Teams and OneDrive</div>
+                            </div>
+                            <div class="bg-accent-50 p-4 rounded-lg">
+                                <div class="text-2xl font-bold text-accent">Less shadow IT</div>
+                                <div class="text-sm">Reduction in unsupported tools and manual processes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Additional Portfolio Modals -->
+<div id="modal2" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-display text-3xl font-bold">Secure Microsoft 365 Test Tenant & Policies</h3>
+                <button onclick="closeModal('modal2')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <img src="../public/images/projects/Secure-Microsoft-365-Test-Tenant-Policies.png" alt="Secure Microsoft 365 Test Tenant & Policies" class="w-full h-64 object-cover rounded-lg mb-6" />
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Project Overview</h4>
+                    <p class="text-text-secondary mb-4">Built and hardened a dedicated Microsoft 365 test tenant to experiment with identity, security, and compliance features before applying them in production. The tenant included test users, groups, roles, and multiple security policies.</p>
+                    <div class="space-y-2">
+                        <div><strong>Environment:</strong> Microsoft 365, Azure AD / Entra ID</div>
+                        <div><strong>Focus:</strong> MFA, Conditional Access, security baselines, alerting</div>
+                        <div><strong>Tools:</strong> Entra ID portal, Microsoft 365 security and compliance centers</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Results Achieved</h4>
+                    <div class="space-y-4">
+                        <div class="bg-success-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-success">MFA enforced</div>
+                            <div class="text-sm">All test accounts protected with multi-factor authentication</div>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-primary">Conditional Access</div>
+                            <div class="text-sm">Policies tested for risky sign-ins and location-based access</div>
+                        </div>
+                        <div class="bg-accent-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-accent">Safer roll-out</div>
+                            <div class="text-sm">Changes validated in lab before impacting real users</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal3" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-display text-3xl font-bold">Intune & Windows Autopilot Zero-Touch Setup</h3>
+                <button onclick="closeModal('modal3')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <img src="../public/images/projects/Intune-Windows-Autopilot-Zero-Touch-Setup.png" alt="Intune & Windows Autopilot Zero-Touch Setup" class="w-full h-64 object-cover rounded-lg mb-6" />
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Project Overview</h4>
+                    <p class="text-text-secondary mb-4">Configured Microsoft Intune and Windows Autopilot to enable zero-touch device provisioning. Devices automatically enroll, receive policies, apps, and security baselines without manual intervention.</p>
+                    <div class="space-y-2">
+                        <div><strong>Environment:</strong> Microsoft Intune, Windows Autopilot</div>
+                        <div><strong>Scope:</strong> Enrollment profiles, configuration profiles, app deployment, compliance policies</div>
+                        <div><strong>Goal:</strong> Standardize device setup and reduce manual imaging</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Results Achieved</h4>
+                    <div class="space-y-4">
+                        <div class="bg-success-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-success">100% automated onboarding</div>
+                            <div class="text-sm">Windows devices fully configured through Autopilot</div>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-primary">Consistent security</div>
+                            <div class="text-sm">Same compliance and security policies applied to all enrolled devices</div>
+                        </div>
+                        <div class="bg-accent-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-accent">Reduced setup time</div>
+                            <div class="text-sm">Significant time saved versus traditional manual builds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal4" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-display text-3xl font-bold">Multi-Switch Networking Lab with Synology NAS</h3>
+                <button onclick="closeModal('modal4')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <img src="../public/images/projects/Multi-Switch-Networking-Lab-with-Synology-NAS.png" alt="Multi-Switch Networking Lab with Synology NAS" class="w-full h-64 object-cover rounded-lg mb-6" />
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Project Overview</h4>
+                    <p class="text-text-secondary mb-4">Designed a home lab to practice real-world networking and storage scenarios using routers, switches, VLANs, and a Synology NAS. The lab is used to test backup strategies, file services, and virtual environments.</p>
+                    <div class="space-y-2">
+                        <div><strong>Environment:</strong> Routers, managed switches, Synology NAS</div>
+                        <div><strong>Focus:</strong> VLANs, routing, DHCP, storage, backup</div>
+                        <div><strong>Use case:</strong> Safe place to test network configurations before using them in production</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Results Achieved</h4>
+                    <div class="space-y-4">
+                        <div class="bg-success-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-success">Isolated VLANs</div>
+                            <div class="text-sm">Segmented lab network for servers, clients, and management</div>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-primary">Centralized storage</div>
+                            <div class="text-sm">NAS used for backups, ISOs, and shared lab data</div>
+                        </div>
+                        <div class="bg-accent-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-accent">Hands-on practice</div>
+                            <div class="text-sm">Realistic platform to experiment with networking changes safely</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal5" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-display text-3xl font-bold">SharePoint Resource Hub for 800+ Teachers</h3>
+                <button onclick="closeModal('modal5')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <img src="../public/images/projects/SharePoint-Resource-Hub-for-800+-Teachers.png" alt="SharePoint Resource Hub for 800+ Teachers" class="w-full h-64 object-cover rounded-lg mb-6" />
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Project Overview</h4>
+                    <p class="text-text-secondary mb-4">Created a SharePoint communication site to centralize resources, policies, and training material for teachers. The hub helps staff quickly find updated documents instead of relying on email attachments.</p>
+                    <div class="space-y-2">
+                        <div><strong>Audience:</strong> 800+ teachers and staff</div>
+                        <div><strong>Content:</strong> Policies, templates, training videos, quick links</div>
+                        <div><strong>Goal:</strong> Improve information access and reduce duplicated content</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Results Achieved</h4>
+                    <div class="space-y-4">
+                        <div class="bg-success-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-success">800+ users served</div>
+                            <div class="text-sm">Single place where educators can find what they need</div>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-primary">Better collaboration</div>
+                            <div class="text-sm">Easier sharing of teaching resources and best practices</div>
+                        </div>
+                        <div class="bg-accent-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-accent">Less email clutter</div>
+                            <div class="text-sm">Fewer large attachments and outdated document versions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal6" class="fixed inset-0 bg-black bg-opacity-75 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-xl max-w-4xl w-full max-h-screen overflow-y-auto">
+        <div class="p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-display text-3xl font-bold">ServiceNow ITIL Service Desk Workflows</h3>
+                <button onclick="closeModal('modal6')" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <img src="../public/images/projects/ServiceNow-ITIL-Service-Desk-Workflows.png" alt="ServiceNow ITIL Service Desk Workflows" class="w-full h-64 object-cover rounded-lg mb-6" />
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Project Overview</h4>
+                    <p class="text-text-secondary mb-4">Used a ServiceNow demo instance to design and test ITIL-based service desk processes, including incident, request, and change management. The project focused on understanding how ITIL practices translate into real tool configuration.</p>
+                    <div class="space-y-2">
+                        <div><strong>Framework:</strong> ITIL v4 Foundation</div>
+                        <div><strong>Environment:</strong> ServiceNow demo instance</div>
+                        <div><strong>Processes:</strong> Incident, service request, change, SLAs, knowledge base</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xl mb-4">Results Achieved</h4>
+                    <div class="space-y-4">
+                        <div class="bg-success-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-success">ITIL-aligned flows</div>
+                            <div class="text-sm">Incidents and requests mapped to ITIL best practices</div>
+                        </div>
+                        <div class="bg-primary-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-primary">Defined SLAs</div>
+                            <div class="text-sm">Basic SLAs configured for response and resolution times</div>
+                        </div>
+                        <div class="bg-accent-50 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-accent">Knowledge base usage</div>
+                            <div class="text-sm">Articles used to resolve recurring issues faster</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Sticky Contact CTA -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-3">
+        <!-- Mobile: Call Hamza -->
+        <a 
+            href="tel:+32497782826" 
+            class="md:hidden w-16 h-16 rounded-full bg-primary text-white shadow-cta-hover flex items-center justify-center transition-transform duration-200 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/50" 
+            aria-label="Call Hamza" 
+            title="Call Hamza"
+        >
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.72 11.72 0 003.68.59 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.01l-2.23 2.1z"/>
+            </svg>
+        </a>
+
+        <!-- Desktop: Email Hamza -->
+        <a 
+            href="mailto:hamza.saidi@outlook.be" 
+            class="hidden md:flex w-16 h-16 rounded-full bg-accent text-white shadow-cta-hover items-center justify-center transition-transform duration-200 hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-accent/50" 
+            aria-label="Email Hamza" 
+            title="Email Hamza"
+        >
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2zm16 2l-8 5-8-5v12h16z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script>
+    // Mobile menu toggle
+    (function() {
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    })();
+
+    // Active navigation state highlighting with scroll position
+    (function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+        if (navLinks.length === 0) return;
+
+        const headerOffset = 100;
+        const focusOffsetRatio = 0.25;
+
+        const linkMap = new Map();
+        navLinks.forEach(link => {
+            const sectionId = link.getAttribute('data-section') || (link.getAttribute('href') || '').replace('#', '');
+            if (!sectionId || linkMap.has(sectionId)) return;
+            const el = document.getElementById(sectionId);
+            if (el) {
+                linkMap.set(sectionId, { link, element: el });
+            }
+        });
+
+        if (linkMap.size === 0) return;
+
+        function setActiveLink(activeId) {
+            navLinks.forEach(link => {
+                const sectionId = link.getAttribute('data-section') || (link.getAttribute('href') || '').replace('#', '');
+                if (sectionId && sectionId === activeId) {
+                    link.classList.add('text-primary', 'font-semibold');
+                    link.classList.remove('text-text-secondary');
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.classList.remove('text-primary', 'font-semibold');
+                    link.classList.add('text-text-secondary');
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        function getOrderedSections() {
+            const entries = [];
+            linkMap.forEach(({ element }, id) => {
+                const rect = element.getBoundingClientRect();
+                const top = rect.top + window.pageYOffset;
+                const height = element.offsetHeight || rect.height || 1;
+                entries.push({
+                    id,
+                    element,
+                    top,
+                    height,
+                    bottom: top + height
+                });
+            });
+            entries.sort((a, b) => a.top - b.top);
+            return entries;
+        }
+
+        function determineActiveSection() {
+            const sections = getOrderedSections();
+            if (sections.length === 0) return;
+
+            const viewportHeight = window.innerHeight || 1;
+            const focusLine = window.pageYOffset + headerOffset + viewportHeight * focusOffsetRatio;
+
+            let activeSection = null;
+
+            for (let i = 0; i < sections.length; i++) {
+                const section = sections[i];
+
+                if (focusLine >= section.top && focusLine < section.bottom) {
+                    activeSection = section;
+                    break;
+                }
+            }
+
+            if (!activeSection) {
+                const lastSection = sections[sections.length - 1];
+                if (focusLine >= lastSection.bottom) {
+                    activeSection = lastSection;
+                }
+            }
+
+            setActiveLink(activeSection ? activeSection.id : null);
+        }
+
+        let ticking = false;
+        function requestTick() {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    determineActiveSection();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestTick, { passive: true });
+        window.addEventListener('resize', requestTick);
+        window.addEventListener('load', determineActiveSection);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const sectionId = link.getAttribute('data-section') || (link.getAttribute('href') || '').replace('#', '');
+                if (sectionId) {
+                    setActiveLink(sectionId);
+                    setTimeout(determineActiveSection, 400);
+                }
+            });
+        });
+    })();
+
+    // Scroll animation for value proposition cards
+    (function() {
+        const cards = document.querySelectorAll('.value-card');
+        if (cards.length === 0) return;
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = parseInt(entry.target.getAttribute('data-delay')) || 0;
+                    setTimeout(() => {
+                        entry.target.classList.remove('opacity-0', 'translate-y-5');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                    }, delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    })();
+
+    // Portfolio cards scroll animation
+    (function() {
+        const portfolioItems = document.querySelectorAll('.portfolio-item[data-aos]');
+        if (portfolioItems.length === 0) return;
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = parseInt(entry.target.getAttribute('data-aos-delay')) || 0;
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, delay);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        portfolioItems.forEach(item => {
+            item.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(item);
+        });
+    })();
+
+    // Technical Skills bars animation
+    (function() {
+        const skillBars = document.querySelectorAll('.skill-bar');
+        if (skillBars.length === 0) return;
+
+        // Find the parent section to observe
+        const skillsSection = skillBars[0].closest('section');
+        if (!skillsSection) return;
+
+        // Set initial state: all bars at 0% with transition
+        skillBars.forEach(bar => {
+            bar.style.transition = 'width 1.8s ease-in-out';
+        });
+
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate each bar with stagger effect
+                    skillBars.forEach((bar, index) => {
+                        const targetPercentage = parseInt(bar.getAttribute('data-percentage')) || 0;
+                        const staggerDelay = index * 150; // 150ms stagger between bars
+                        
+                        setTimeout(() => {
+                            bar.style.width = targetPercentage + '%';
+                        }, staggerDelay);
+                    });
+                    
+                    // Unobserve after animation starts (runs once)
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(skillsSection);
+    })();
+
+    // CertProofPanel scroll animation
+    (function() {
+        const panel = document.querySelector('.cert-proof-panel');
+        if (!panel) return;
+
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        panel.classList.remove('opacity-0', 'translate-y-[30px]');
+                        panel.classList.add('opacity-100', 'translate-y-0');
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(panel);
+    })();
+
+    // Portrait image load animation
+    (function() {
+        const portraitImage = document.querySelector('.portrait-image');
+        if (!portraitImage) return;
+
+        function animateImage() {
+            // Get the computed scale from CSS (responsive scale values)
+            const computedStyle = window.getComputedStyle(portraitImage);
+            const currentScale = computedStyle.transform;
+            portraitImage.style.opacity = '1';
+            // Preserve the CSS scale transform (set by .portrait-scaled class)
+            // The CSS already handles responsive scaling, so we just animate opacity
+        }
+
+        if (portraitImage.complete && portraitImage.naturalHeight !== 0) {
+            // Image already loaded
+            setTimeout(animateImage, 50);
+        } else {
+            // Wait for image to load
+            portraitImage.addEventListener('load', animateImage, { once: true });
+            portraitImage.addEventListener('error', animateImage, { once: true });
+        }
+    })();
+
+    // CertProofModal interactions
+    (function() {
+        const modal = document.getElementById('cert-proof-modal');
+        const openBtn = document.getElementById('view-all-certs-btn');
+        const closeTriggers = modal?.querySelectorAll('[data-close-cert-proof-modal]');
+        const modalContent = modal?.querySelector('.relative');
+        
+        if (!modal || !openBtn) return;
+
+        let previousActiveElement = null;
+        let focusableElements = null;
+
+        function getFocusableElements() {
+            return modal.querySelectorAll(
+                'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+            );
+        }
+
+        function trapFocus(e) {
+            if (e.key !== 'Tab') return;
+            
+            if (!focusableElements) {
+                focusableElements = getFocusableElements();
+            }
+            
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus();
+                }
+            } else {
+                if (document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus();
+                }
+            }
+        }
+
+        function openModal() {
+            previousActiveElement = document.activeElement;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            
+            // Trigger animation
+            setTimeout(() => {
+                if (modalContent) {
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }
+            }, 10);
+            
+            // Focus first focusable element
+            setTimeout(() => {
+                focusableElements = getFocusableElements();
+                if (focusableElements.length > 0) {
+                    focusableElements[0].focus();
+                }
+            }, 50);
+            
+            // Add focus trap
+            modal.addEventListener('keydown', trapFocus);
+        }
+
+        function closeModal() {
+            if (modalContent) {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+            }
+            
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+                
+                // Remove focus trap
+                modal.removeEventListener('keydown', trapFocus);
+                
+                // Return focus to trigger button
+                if (previousActiveElement) {
+                    previousActiveElement.focus();
+                }
+            }, 180);
+        }
+
+        // Open modal
+        openBtn.addEventListener('click', openModal);
+
+        // Close modal triggers
+        if (closeTriggers) {
+            closeTriggers.forEach(trigger => {
+                trigger.addEventListener('click', closeModal);
+            });
+        }
+
+        // Close on backdrop click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    })();
+
+    // Certification modal interactions
+    (function () {
+        const certModal = document.getElementById('cert-modal');
+        const certImage = document.getElementById('cert-modal-image');
+        if (!certModal || !certImage) return;
+
+        const closeTriggers = certModal.querySelectorAll('[data-close-modal]');
+        const certButtons = document.querySelectorAll('.cert-eye-btn');
+
+        const certImageMap = {
+            'ms-admin-expert': '../public/images/certs/ms-admin-expert.png',
+            'ms-endpoint-associate': '../public/images/certs/ms-endpoint-associate.png',
+            'ms-900-fundamentals': '../public/images/certs/ms-900-fundamentals.png',
+            'az-900-fundamentals': '../public/images/certs/az-900-fundamentals.png',
+            'sc-900-fundamentals': '../public/images/certs/sc-900-fundamentals.png',
+            'itil4-foundation': '../public/images/certs/itil4-foundation.png'
+        };
+
+        function openCertModal(certId) {
+            const imageSrc = certImageMap[certId];
+            if (!imageSrc) return;
+            certImage.src = imageSrc;
+            certModal.classList.remove('hidden');
+            certModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeCertModal() {
+            certModal.classList.remove('flex');
+            certModal.classList.add('hidden');
+            certImage.src = '';
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        certButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const certId = button.getAttribute('data-cert-id');
+                openCertModal(certId);
+            });
+        });
+
+        closeTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', closeCertModal);
+        });
+
+        certModal.addEventListener('click', (event) => {
+            if (event.target === certModal) {
+                closeCertModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && certModal.classList.contains('flex')) {
+                closeCertModal();
+            }
+        });
+    })();
+
+    // Portfolio filtering
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+            
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('active', 'bg-primary', 'text-white');
+                b.classList.add('bg-surface-100', 'text-text-secondary');
+            });
+            this.classList.add('active', 'bg-primary', 'text-white');
+            this.classList.remove('bg-surface-100', 'text-text-secondary');
+            
+            // Filter portfolio items
+            document.querySelectorAll('.portfolio-item').forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Modal functions with error handling
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        } else {
+            console.warn(`Modal with ID '${modalId}' not found`);
+            // Fallback to modal1 or show an alert
+            alert('Portfolio details coming soon!');
+        }
+    }
+
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    // FAQ toggle
+    function toggleFAQ(id) {
+        const content = document.getElementById(`faq-content-${id}`);
+        const icon = document.getElementById(`faq-icon-${id}`);
+        
+        if (content && icon) {
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    }
+
+
+    // Form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simulate form submission
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        setTimeout(() => {
+            alert('Thank you! Your project inquiry has been sent. I\'ll get back to you within 24 hours.');
+            this.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    });
+
+    // Smooth scrolling for anchor links with header offset
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '#!') return; // Skip empty anchors
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                const headerOffset = 100; // Offset for sticky header
+                const elementPosition = target.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Counter animation
+    function animateCounters() {
+        const counters = [
+            { id: 'experience-counter', target: 10 },
+            { id: 'projects-counter', target: 400 },
+            { id: 'satisfaction-counter', target: 8 }
+        ];
+        
+        counters.forEach(counter => {
+            const element = document.getElementById(counter.id);
+            if (element) {
+                let current = 0;
+                const increment = counter.target / 50;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= counter.target) {
+                        element.textContent = counter.target;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, 50);
+            }
+        });
+    }
+
+    // Trigger counter animation when page loads
+    window.addEventListener('load', animateCounters);
+
+    // Close modal when clicking outside
+    document.querySelectorAll('[id^="modal"]').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal(this.id);
+            }
+        });
+    });
+</script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
