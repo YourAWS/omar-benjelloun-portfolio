@@ -1,35 +1,36 @@
 module.exports = {
-  content: ["./pages/*.{html,js}", "./index.html"],
+  content: ["./pages/**/*.{html,js}", "./index.html"],
   theme: {
     extend: {
       colors: {
         // Primary Colors - Professional authority
+        // Primary Colors - Professional authority
         primary: {
-          50: "#EFF6FF", // blue-50
-          100: "#DBEAFE", // blue-100
-          200: "#BFDBFE", // blue-200
-          300: "#93C5FD", // blue-300
-          400: "#60A5FA", // blue-400
-          500: "#3B82F6", // blue-500
-          600: "#2563EB", // blue-600
-          700: "#1D4ED8", // blue-700
-          800: "#1E3A8A", // blue-800 - Primary
-          900: "#1E40AF", // blue-900
-          DEFAULT: "#1E3A8A", // blue-800
+          50: "#F0FDF4", // green-50
+          100: "#DCFCE7", // green-100
+          200: "#BBF7D0", // green-200
+          300: "#86EFAC", // green-300
+          400: "#4ADE80", // green-400
+          500: "#22C55E", // green-500
+          600: "#16A34A", // green-600
+          700: "#15803D", // green-700
+          800: "#166534", // green-800 - Primary
+          900: "#14532D", // green-900
+          DEFAULT: "#166534", // green-800
         },
         // Secondary Colors - Supporting hierarchy
         secondary: {
-          50: "#EFF6FF", // blue-50
-          100: "#DBEAFE", // blue-100
-          200: "#BFDBFE", // blue-200
-          300: "#93C5FD", // blue-300
-          400: "#60A5FA", // blue-400
-          500: "#3B82F6", // blue-500 - Secondary
-          600: "#2563EB", // blue-600
-          700: "#1D4ED8", // blue-700
-          800: "#1E3A8A", // blue-800
-          900: "#1E40AF", // blue-900
-          DEFAULT: "#3B82F6", // blue-500
+          50: "#F0FDF4", // green-50
+          100: "#DCFCE7", // green-100
+          200: "#BBF7D0", // green-200
+          300: "#86EFAC", // green-300
+          400: "#4ADE80", // green-400
+          500: "#22C55E", // green-500 - Secondary
+          600: "#16A34A", // green-600
+          700: "#15803D", // green-700
+          800: "#166534", // green-800
+          900: "#14532D", // green-900
+          DEFAULT: "#22C55E", // green-500
         },
         // Accent Colors - Conversion moments
         accent: {
@@ -44,6 +45,11 @@ module.exports = {
           800: "#92400E", // amber-800
           900: "#78350F", // amber-900
           DEFAULT: "#F59E0B", // amber-500
+        },
+        brand: {
+          500: "#043915", // dark green
+          600: "#4C763B", // light green
+          DEFAULT: "#043915",
         },
         // Background Colors
         background: "#FFFFFF", // white
