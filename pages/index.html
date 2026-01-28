@@ -7,7 +7,18 @@
     <title>Creative Professional Portfolio - Transform Your Brand with Award-Winning Solutions</title>
     <meta name="description"
         content="Award-winning creative professional with 150+ successful projects. Transform your brand with proven expertise. 98% client satisfaction, 40% average engagement increase." />
+    <link rel="icon" type="image/png" class="round" href="/public/images/benjellon.png">
     <link rel="stylesheet" href="../css/main.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "_d-XP0giDBQxyCCEs",
+            });
+        })();
+    </script>
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -78,9 +89,14 @@
                         data-section="faqs">FAQs</a>
                     <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-250"
                         data-section="contact">Contact</a>
+                    <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-250"
+                        data-section="contact">Blogs</a>
                     <a href="https://www.fiverr.com/benje_omar?source=gig_page" target="_blank"
                         rel="noopener noreferrer" id="schedule-button" class="btn-primary text-center">Start Your
                         Project</a>
+                </div>
+                <div>
+                    
                 </div>
                 <button class="md:hidden p-2" id="mobile-menu-btn" aria-label="Toggle mobile menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,6 +104,13 @@
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
+                <a href="/login" class="items-center text-text-secondary hover:text-primary transition-250"
+                aria-label="Login">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5m0 0l-5-5m5 5H3" />
+                    </svg>
+                </a>
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4 pt-4 border-t border-border">
@@ -105,9 +128,19 @@
                         data-section="faqs">FAQs</a>
                     <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-250 py-2"
                         data-section="contact">Contact</a>
+                    <a href="#contact" class="nav-link text-text-secondary hover:text-primary transition-250 py-2"
+                        data-section="contact">Blogs</a>
                     <a href="https://www.fiverr.com/benje_omar?source=gig_page" target="_blank"
                         rel="noopener noreferrer" id="schedule-button-mobile"
                         class="btn-primary text-center py-2 mt-2">Start Your Project</a>
+                        <a href="/login"
+                        class="flex items-center space-x-2 text-text-secondary hover:text-primary transition-250 py-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5m0 0l-5-5m5 5H3" />
+                            </svg>
+                            <span>Login</span>
+                        </a>
                 </div>
             </div>
         </div>
@@ -116,7 +149,7 @@
     <!-- Schedule Menu Overlay -->
     <!-- <div id="schedule-overlay" class="hidden fixed inset-0 bg-black/40 z-50"></div>
     <div id="schedule-menu" -->
-        <!-- class="hidden fixed z-50 top-28 right-6 w-[calc(100%-3rem)] max-w-sm bg-white rounded-2xl shadow-cta border border-border p-6 space-y-4">
+    <!-- class="hidden fixed z-50 top-28 right-6 w-[calc(100%-3rem)] max-w-sm bg-white rounded-2xl shadow-cta border border-border p-6 space-y-4">
         <div class="flex items-center justify-between">
             <h3 class="font-display text-xl font-semibold text-text-primary">Choose Meeting Length</h3>
             <button type="button" id="schedule-close" class="text-text-secondary hover:text-text-primary transition-250"
@@ -415,8 +448,7 @@
                         <h3 class="font-semibold text-gray-900 text-sm">Microsoft
                         </h3>
                         <p class="text-xs text-gray-500 mt-1">Fabric Analytics Engineer Associate</p>
-                        <a href="#"
-                            target="_blank" rel="noopener noreferrer"
+                        <a href="#" target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center gap-1 mt-2 text-xs font-medium text-green-600 hover:text-green-700">
                             <span>Verify on Microsoft Learn</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 24 24" fill="none"
@@ -674,7 +706,7 @@
 
     <!-- Portfolio Showcase -->
     <!-- <section class="py-20 bg-white" id="case-studies"> -->
-        <!-- <div class="max-w-7xl mx-auto px-6">
+    <!-- <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="font-display text-4xl font-bold text-text-primary">
                     Featured IT Projects & Lab Work
@@ -685,33 +717,33 @@
                     real-world security, productivity, and user adoption improvements.
                 </p> -->
 
-                <!-- Filter Buttons -->
-                <!-- <div class="flex flex-wrap justify-center gap-4 mb-12"> -->
-                    <!-- <button
+    <!-- Filter Buttons -->
+    <!-- <div class="flex flex-wrap justify-center gap-4 mb-12"> -->
+    <!-- <button
                         class="filter-btn active px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-primary text-white border-b-2 border-green-600"
                         data-filter="all">
                         All Projects
                     </button> -->
-                    <!-- <button
+    <!-- <button
                         class="filter-btn px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-surface-100 text-slate-500 hover:text-slate-800"
                         data-filter="branding">
                         Microsoft 365 & Intune
                     </button> -->
-                    <!-- <button
+    <!-- <button
                         class="filter-btn px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-surface-100 text-slate-500 hover:text-slate-800"
                         data-filter="web-design">
                         Networking & Lab
                     </button>
                     <button -->
-                        <!-- class="filter-btn px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-surface-100 text-slate-500 hover:text-slate-800"
+    <!-- class="filter-btn px-6 py-3 rounded-lg font-semibold transition-colors duration-200 bg-surface-100 text-slate-500 hover:text-slate-800"
                         data-filter="marketing">
                         IT Service Management
                     </button> -->
-                <!-- </div> -->
-            <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
 
-            <!-- Portfolio Grid -->
-            <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+    <!-- Portfolio Grid -->
+    <!-- <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
                 <div class="portfolio-item branding" data-category="branding" data-aos="fade-up" data-aos-delay="0"
                     style="opacity: 0; transform: translateY(20px);">
                     <div class="portfolio-card group cursor-pointer hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-out"
@@ -910,7 +942,7 @@
                     </div>
                 </div>
             </div> -->
-        <!-- </div> -->
+    <!-- </div> -->
     <!-- </section> -->
 
     <!-- Client Testimonials -->
@@ -1350,8 +1382,7 @@
                             class="mb-4 portrait-container relative rounded-xl shadow-md overflow-hidden bg-[#F7F9FC] w-full aspect-[1/1.2] md:aspect-[3/4] lg:flex-1 min-h-0">
                             <div class="absolute inset-0 flex flex-col portrait-safe-area">
                                 <div class="flex-1 flex items-start justify-center min-h-0">
-                                    <img src="../public/images/benjellon.png"
-                                        alt="Portrait of omar benjellon"
+                                    <img src="../public/images/benjellon.png" alt="Portrait of omar benjellon"
                                         class="portrait-image w-auto h-full max-w-full object-contain portrait-scaled"
                                         style="max-width: 1200px; opacity: 0; transition: opacity 220ms ease-out, transform 220ms ease-out; object-position: center top;"
                                         loading="lazy" width="640" height="800"
@@ -1529,7 +1560,9 @@
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                     </div>
-                    <p class="text-text-secondary leading-relaxed mb-6">"Great experience with Omar. He was responsive, patient, and very knowledgeable. He explained everything clearly, delivered on time, and the final result matched my expectations. I would definitely work with him again."</p>
+                    <p class="text-text-secondary leading-relaxed mb-6">"Great experience with Omar. He was responsive,
+                        patient, and very knowledgeable. He explained everything clearly, delivered on time, and the
+                        final result matched my expectations. I would definitely work with him again."</p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary font-bold">
@@ -1565,7 +1598,9 @@
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                     </div>
-                    <p class="text-text-secondary leading-relaxed mb-6">"Outstanding work! Very professional, efficient, and delivered exactly what I needed. Highly recommend and would definitely work with him again."</p>
+                    <p class="text-text-secondary leading-relaxed mb-6">"Outstanding work! Very professional, efficient,
+                        and delivered exactly what I needed. Highly recommend and would definitely work with him again."
+                    </p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-10 h-10 rounded-full bg-secondary-100 flex items-center justify-center text-secondary font-bold">
@@ -1601,7 +1636,9 @@
                                 d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                         </svg>
                     </div>
-                    <p class="text-text-secondary leading-relaxed mb-6">"Another great experience! Omar delivered outstanding work once again, with impressive attention to detail and a smooth, responsive result. Truly reliable and highly recommended."</p>
+                    <p class="text-text-secondary leading-relaxed mb-6">"Another great experience! Omar delivered
+                        outstanding work once again, with impressive attention to detail and a smooth, responsive
+                        result. Truly reliable and highly recommended."</p>
                     <div class="flex items-center gap-4">
                         <div
                             class="w-10 h-10 rounded-full bg-accent-100 flex items-center justify-center text-accent font-bold">
@@ -1788,17 +1825,16 @@
 
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <form action="mailto:elbouzidiayoub.solicode@gmail.com" method="GET" class="space-y-6"
-                        id="contact-form">
+                    <form id="contact-form" class="space-y-6" onsubmit="sendEmail(event)">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-semibold text-text-primary mb-2">Name *</label>
-                                <input type="text" name="name" required class="form-input"
+                                <input type="text" id="name" name="name" required class="form-input"
                                     placeholder="Your full name" />
                             </div>
                             <div>
                                 <label class="block text-sm font-semibold text-text-primary mb-2">Email *</label>
-                                <input type="email" name="email" required class="form-input"
+                                <input type="email" id="email" name="email" required class="form-input"
                                     placeholder="your@email.com" />
                             </div>
                         </div>
@@ -1806,7 +1842,7 @@
                         <div>
                             <label class="block text-sm font-semibold text-text-primary mb-2">Message / Project Details
                                 *</label>
-                            <textarea name="message" rows="6" required class="form-input"
+                            <textarea id="message" name="message" rows="6" required class="form-input"
                                 placeholder="Tell me about your project, goals, and any specific requirements..."></textarea>
                         </div>
 
@@ -2878,6 +2914,37 @@
                 }
             });
         });
+
+        // EmailJS configuration
+        function sendEmail(event) {
+            event.preventDefault();
+
+            const btn = document.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            let params = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+            };
+
+            emailjs.send("service_ad8fd4j", "template_cmnvh2d", params)
+                .then(function () {
+                    alert("Email sent successfully!");
+                    document.getElementById("contact-form").reset();
+                })
+                .catch(function (error) {
+                    const errorMessage = error.text || error.message || JSON.stringify(error);
+                    alert("Failed to send email: " + errorMessage);
+                    console.error("EmailJS Error:", error);
+                })
+                .finally(function () {
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                });
+        }
     </script>
     <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
 </body>
