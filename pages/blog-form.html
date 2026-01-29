@@ -42,6 +42,54 @@
             background-color: #f3f4f6;
             color: #166534;
         }
+
+        .editor-toolbar button.active {
+            background-color: #166534;
+            color: white;
+        }
+
+        #editor:empty:before {
+            content: attr(data-placeholder);
+            color: #9ca3af;
+            pointer-events: none;
+        }
+
+        #editor:focus {
+            outline: none;
+        }
+
+        #editor ul,
+        #editor ol {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #editor ul {
+            list-style-type: disc;
+        }
+
+        #editor ol {
+            list-style-type: decimal;
+        }
+
+        #editor p {
+            margin-bottom: 0.5rem;
+        }
+
+        #editor b,
+        #editor strong {
+            font-weight: bold;
+        }
+
+        #editor i,
+        #editor em {
+            font-style: italic;
+        }
+
+        #editor u {
+            text-decoration: underline;
+        }
     </style>
     <script>
 
@@ -56,7 +104,39 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             checkUrlForEdit();
+            setupEditor();
         });
+
+        function setupEditor() {
+            const editor = document.getElementById('editor');
+            
+            // Update toolbar state when selection changes
+            editor.addEventListener('mouseup', updateToolbarState);
+            editor.addEventListener('keyup', updateToolbarState);
+            editor.addEventListener('focus', updateToolbarState);
+            
+            // Prevent losing focus when clicking toolbar
+            document.querySelectorAll('.editor-toolbar button').forEach(button => {
+                button.addEventListener('mousedown', (e) => {
+                    e.preventDefault(); // Prevents editor from losing focus
+                });
+            });
+        }
+
+        function updateToolbarState() {
+            const commands = ['bold', 'italic', 'underline', 'insertUnorderedList', 'insertOrderedList'];
+            
+            commands.forEach(command => {
+                const button = document.querySelector(`[data-command="${command}"]`);
+                if (button) {
+                    if (document.queryCommandState(command)) {
+                        button.classList.add('active');
+                    } else {
+                        button.classList.remove('active');
+                    }
+                }
+            });
+        }
 
         function checkUrlForEdit() {
             const urlParams = new URLSearchParams(window.location.search);
@@ -71,7 +151,7 @@
 
                 if (post) {
                     document.getElementById('title').value = post.title;
-                    document.getElementById('editor').innerHTML = post.description; // Load into div
+                    document.getElementById('editor').innerHTML = post.description;
                     existingImage = post.image;
 
                     if (post.image) {
@@ -96,8 +176,18 @@
         function handlePostSubmission(event) {
             event.preventDefault();
 
-            const title = document.getElementById('title').value;
-            const description = document.getElementById('editor').innerHTML; // Get from div
+            const title = document.getElementById('title').value.trim();
+            const description = document.getElementById('editor').innerHTML.trim();
+
+            if (!title) {
+                alert('Please enter a title for your post.');
+                return;
+            }
+
+            if (!description || description === '') {
+                alert('Please enter some content for your post.');
+                return;
+            }
 
             const imageInput = document.getElementById('image');
             const file = imageInput.files[0];
@@ -109,8 +199,6 @@
                 }
                 reader.readAsDataURL(file);
             } else {
-                // If editing and no new file selected, keep existing image
-                // If creating and no file, use null
                 savePost(title, description, existingImage);
             }
         }
@@ -125,8 +213,7 @@
                     blogs[index].title = title;
                     blogs[index].description = description;
                     blogs[index].image = imageBase64;
-                    // We can choose to update date or keep original. Let's keep original for now or update "updatedAt".
-                    // For simplicity, let's just update the content.
+                    blogs[index].updatedAt = new Date().toISOString();
                 }
             } else {
                 // Create new
@@ -135,7 +222,8 @@
                     title: title,
                     description: description,
                     image: imageBase64,
-                    date: new Date().toLocaleDateString()
+                    date: new Date().toLocaleDateString(),
+                    createdAt: new Date().toISOString()
                 };
                 blogs.push(newPost);
             }
@@ -151,6 +239,13 @@
             const previewImg = document.getElementById('preview-img');
 
             if (file) {
+                // Validate file size (5MB max)
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('File size must be less than 5MB');
+                    input.value = '';
+                    return;
+                }
+
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     previewImg.src = e.target.result;
@@ -166,24 +261,53 @@
         }
 
         function removeImage(event) {
-            event.preventDefault(); // Prevent form submission or bubbling
-            event.stopPropagation(); // Prevent triggering the file input click
+            event.preventDefault();
+            event.stopPropagation();
 
             const input = document.getElementById('image');
             const placeholder = document.getElementById('upload-placeholder');
             const previewContainer = document.getElementById('image-preview');
             const previewImg = document.getElementById('preview-img');
 
-            input.value = ''; // Clear file input
-            existingImage = null; // Clear key
+            input.value = '';
+            existingImage = null;
             previewImg.src = '';
             placeholder.classList.remove('hidden');
             previewContainer.classList.add('hidden');
         }
 
-        function execCmd(command) {
-            document.execCommand(command, false, null);
-            document.getElementById('editor').focus();
+        function execCmd(command, value = null) {
+            const editor = document.getElementById('editor');
+            
+            // Focus the editor first
+            editor.focus();
+            
+            // Execute the command
+            document.execCommand(command, false, value);
+            
+            // Update toolbar state
+            updateToolbarState();
+            
+            // Keep focus on editor
+            editor.focus();
+        }
+
+        function formatHeading(level) {
+            execCmd('formatBlock', `<h${level}>`);
+        }
+
+        function createLink() {
+            const url = prompt('Enter the URL:');
+            if (url) {
+                execCmd('createLink', url);
+            }
+        }
+
+        function insertImage() {
+            const url = prompt('Enter image URL:');
+            if (url) {
+                execCmd('insertImage', url);
+            }
         }
     </script>
 </head>
@@ -261,36 +385,46 @@
                         class="rounded-xl border border-border bg-surface-50 overflow-hidden focus-within:ring-2 focus-within:ring-primary-100 focus-within:border-primary transition-250">
                         <!-- Toolbar -->
                         <div class="flex items-center space-x-1 p-2 border-b border-border bg-white editor-toolbar">
-                            <button type="button" onclick="execCmd('bold')"
-                                class="p-2 rounded hover:bg-surface-100 text-text-secondary" title="Bold">
-                                <b>B</b>
+                            <button type="button" onclick="execCmd('bold')" data-command="bold"
+                                class="p-2 rounded hover:bg-surface-100 text-text-secondary font-bold" title="Bold (Ctrl+B)">
+                                B
                             </button>
-                            <button type="button" onclick="execCmd('italic')"
-                                class="p-2 rounded hover:bg-surface-100 text-text-secondary" title="Italic">
-                                <i>I</i>
+                            <button type="button" onclick="execCmd('italic')" data-command="italic"
+                                class="p-2 rounded hover:bg-surface-100 text-text-secondary italic" title="Italic (Ctrl+I)">
+                                I
                             </button>
-                            <button type="button" onclick="execCmd('underline')"
-                                class="p-2 rounded hover:bg-surface-100 text-text-secondary" title="Underline">
-                                <u>U</u>
+                            <button type="button" onclick="execCmd('underline')" data-command="underline"
+                                class="p-2 rounded hover:bg-surface-100 text-text-secondary underline" title="Underline (Ctrl+U)">
+                                U
                             </button>
                             <div class="w-px h-4 bg-border mx-2"></div>
-                            <button type="button" onclick="execCmd('insertUnorderedList')"
+                            <button type="button" onclick="execCmd('insertUnorderedList')" data-command="insertUnorderedList"
                                 class="p-2 rounded hover:bg-surface-100 text-text-secondary" title="Bullet List">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h16M4 18h16M4 6l-.01 0M4 12l-.01 0M4 18l-.01 0" />
+                                        d="M4 6h16M4 12h16M4 18h16" />
                                 </svg>
                             </button>
-                            <button type="button" onclick="execCmd('insertOrderedList')"
+                            <button type="button" onclick="execCmd('insertOrderedList')" data-command="insertOrderedList"
                                 class="p-2 rounded hover:bg-surface-100 text-text-secondary" title="Numbered List">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                                 </svg>
+                            </button>
+                            <div class="w-px h-4 bg-border mx-2"></div>
+                            <button type="button" onclick="formatHeading(2)"
+                                class="p-2 rounded hover:bg-surface-100 text-text-secondary font-semibold text-sm" title="Heading 2">
+                                H2
+                            </button>
+                            <button type="button" onclick="formatHeading(3)"
+                                class="p-2 rounded hover:bg-surface-100 text-text-secondary font-semibold text-sm" title="Heading 3">
+                                H3
                             </button>
                         </div>
                         <!-- Editor -->
                         <div id="editor" contenteditable="true"
+                            data-placeholder="Start writing your blog post content..."
                             class="w-full px-4 py-3 min-h-[300px] outline-none bg-surface-50 focus:bg-white text-lg overflow-y-auto">
                         </div>
                     </div>
@@ -298,12 +432,12 @@
 
                 <!-- Actions -->
                 <div class="flex items-center justify-end space-x-4 pt-4 border-t border-border">
-                    <button type="button" onclick="window.location.href='index.html'"
+                    <button type="button" onclick="window.location.href='blogs.html'"
                         class="px-6 py-3 rounded-xl font-medium text-text-secondary hover:bg-surface-100 transition-250">
                         Cancel
                     </button>
                     <button type="submit" id="submit-btn" class="btn-primary">
-                        Create
+                        Create Post
                     </button>
                 </div>
             </div>

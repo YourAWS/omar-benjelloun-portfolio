@@ -16,6 +16,154 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+
+        /* Styles for rendered blog content */
+        .blog-content {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .blog-content b,
+        .blog-content strong {
+            font-weight: bold;
+        }
+
+        .blog-content i,
+        .blog-content em {
+            font-style: italic;
+        }
+
+        .blog-content u {
+            text-decoration: underline;
+        }
+
+        .blog-content ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+
+        .blog-content ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+        }
+
+        .blog-content h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-content h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f2937;
+            margin-bottom: 12px;
+            font-family: Georgia, serif;
+        }
+
+        .modal-content p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .modal-content strong {
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .modal-actions .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+        }
+
+        .modal-actions .btn.cancel {
+            background-color: #e5e7eb;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        .modal-actions .btn.cancel:hover {
+            background-color: #d1d5db;
+        }
+
+        .modal-actions .btn.delete {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .modal-actions .btn.delete:hover {
+            background-color: #dc2626;
+        }
     </style>
 </head>
 
@@ -69,17 +217,50 @@
     </div>
 
     <script>
-        function deletePost(id) {
-            if (confirm('Are you sure you want to delete this post?')) {
+        let deletePostId = null;
+
+        function showDeleteModal(id) {
+            deletePostId = id;
+            const modal = document.getElementById('deleteModal');
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('deleteModal');
+            modal.classList.add('hidden');
+            deletePostId = null;
+        }
+
+        function confirmDelete() {
+            if (deletePostId !== null) {
                 let blogs = JSON.parse(localStorage.getItem('blogs') || '[]');
-                blogs = blogs.filter(b => b.id !== id);
+                blogs = blogs.filter(b => b.id !== deletePostId);
                 localStorage.setItem('blogs', JSON.stringify(blogs));
+                closeModal();
                 window.location.reload();
             }
         }
 
+        function deletePost(id) {
+            showDeleteModal(id);
+        }
+
         function editPost(id) {
             window.location.href = `blog-form.html?id=${id}`;
+        }
+
+        // Helper function to strip HTML tags for preview if needed
+        function stripHtml(html) {
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            return temp.textContent || temp.innerText || '';
+        }
+
+        // Helper function to create excerpt
+        function createExcerpt(html, maxLength = 150) {
+            const text = stripHtml(html);
+            if (text.length <= maxLength) return text;
+            return text.substr(0, maxLength) + '...';
         }
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -87,6 +268,14 @@
             const noBlogsMessage = document.getElementById('no-blogs-message');
             const blogs = JSON.parse(localStorage.getItem('blogs') || '[]');
             const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+
+            // Close modal when clicking outside of it
+            const modal = document.getElementById('deleteModal');
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
 
             if (blogs.length === 0) {
                 noBlogsMessage.classList.remove('hidden');
@@ -96,7 +285,7 @@
                     card.className = 'blog-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex flex-col h-full group relative';
 
                     const imageHtml = blog.image
-                        ? `<div class="h-48 w-full bg-gray-100 overflow-hidden"><img src="${blog.image}" alt="${blog.title}" class="w-full h-full object-cover"></div>`
+                        ? `<div class="h-48 w-full bg-gray-100 overflow-hidden"><img src="${blog.image}" alt="${escapeHtml(blog.title)}" class="w-full h-full object-cover"></div>`
                         : `<div class="h-48 w-full bg-surface-100 flex items-center justify-center text-text-muted"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div>`;
 
                     let actionsHtml = '';
@@ -113,20 +302,56 @@
                         `;
                     }
 
-                    card.innerHTML = `
-                        ${imageHtml}
-                        ${actionsHtml}
-                        <div class="p-6 flex-1 flex flex-col">
-                            <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-2">${blog.date}</div>
-                            <h3 class="text-xl font-display font-bold text-text-primary mb-3 line-clamp-2">${blog.title}</h3>
-                            <p class="text-text-secondary mb-4 line-clamp-3">${blog.description}</p>
-                        </div>
+                    // Create the card content container
+                    const contentDiv = document.createElement('div');
+                    contentDiv.className = 'p-6 flex-1 flex flex-col';
+
+                    contentDiv.innerHTML = `
+                        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-2">${blog.date}</div>
+                        <h3 class="text-xl font-display font-bold text-text-primary mb-3 line-clamp-2">${escapeHtml(blog.title)}</h3>
+                        <div class="blog-content text-text-secondary mb-4"></div>
                     `;
+
+                    // Set the innerHTML of the blog content div separately
+                    const blogContentDiv = contentDiv.querySelector('.blog-content');
+                    blogContentDiv.innerHTML = blog.description;
+
+                    // Assemble the card
+                    card.innerHTML = imageHtml + actionsHtml;
+                    card.appendChild(contentDiv);
+
                     blogsContainer.appendChild(card);
                 });
             }
         });
+
+        // Helper function to escape HTML in titles to prevent XSS
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
     </script>
+    <div id="deleteModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Delete Blog Post</h2>
+            <p>
+                Are you sure you want to permanently delete this post?<br />
+                <strong>This action cannot be undone.</strong>
+            </p>
+
+            <div class="modal-actions">
+                <button class="btn cancel" onclick="closeModal()">Cancel</button>
+                <button class="btn delete" onclick="confirmDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
