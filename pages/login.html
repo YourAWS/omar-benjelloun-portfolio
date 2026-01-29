@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Omar Benjelloun Portfolio</title>
+    <link rel="icon" type="image/png" class="round" href="/public/images/benjellon.png">
+    <link rel="stylesheet" href="../css/main.css" />
+    <style>
+        .login-card {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        // Check if already logged in
+        if (localStorage.getItem('isAuthenticated') === 'true') {
+            window.location.href = 'blog-form.html';
+        }
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === 'omar@gmail.com' && password === '12345678') {
+                localStorage.setItem('isAuthenticated', 'true');
+                window.location.href = 'blog-form.html';
+            } else {
+                alert('Invalid email or password.');
+            }
+        }
+    </script>
+</head>
+
+<body class="font-body bg-surface-50 min-h-screen flex items-center justify-center p-4">
+
+
+
+    <!-- Login Card -->
+    <div class="login-card w-full max-w-sm bg-white rounded-2xl shadow-portfolio p-6 border border-gray-100">
+        <div class="text-center mb-6">
+            <div class="font-display text-2xl font-bold text-brand-500 mb-1">
+                Omar Benjelloun
+            </div>
+            <p class="text-sm text-text-secondary">Welcome back! Please login to your account.</p>
+        </div>
+
+        <form class="space-y-6" onsubmit="handleLogin(event)">
+            <div>
+                <label for="email" class="block text-sm font-medium text-text-primary mb-2">Email Address</label>
+                <input type="email" id="email" name="email" required
+                    class="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-2 focus:ring-primary-100 outline-none transition-250 bg-surface-50 focus:bg-white"
+                    placeholder="name@example.com">
+            </div>
+
+            <div>
+                <input type="password" id="password" name="password" required
+                    class="w-full px-4 py-3 rounded-xl border border-border focus:border-primary focus:ring-2 focus:ring-primary-100 outline-none transition-250 bg-surface-50 focus:bg-white"
+                    placeholder="••••••••">
+            </div>
+
+            <button type="submit"
+                class="w-full btn-primary py-3 rounded-xl font-semibold shadow-cta hover:shadow-cta-hover transition-all duration-250">
+                Sign In
+            </button>
+
+            <div class="text-center mt-4">
+                <a href="index.html"
+                    class="inline-flex items-center text-sm text-text-secondary hover:text-primary transition-250">
+                    <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Back to Home
+                </a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
