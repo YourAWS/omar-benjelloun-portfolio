@@ -164,6 +164,61 @@
         .modal-actions .btn.delete:hover {
             background-color: #dc2626;
         }
+
+        /* Loading Spinner */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .loading-overlay.hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        .loading-spinner {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .spinner {
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #16a34a;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text {
+            color: #6b7280;
+            font-size: 1rem;
+            margin: 0;
+        }
     </style>
 </head>
 
@@ -218,6 +273,42 @@
 
     <script>
         let deletePostId = null;
+        const API_URL = 'http://localhost:8000/api/blogs';
+
+        // Initialize loading overlay on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            createLoadingOverlay();
+            loadBlogs();
+        });
+
+        function createLoadingOverlay() {
+            const overlay = document.createElement('div');
+            overlay.id = 'loading-overlay';
+            overlay.className = 'loading-overlay hidden';
+            overlay.innerHTML = `
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p class="loading-text">Loading blogs...</p>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+        }
+
+        function showLoading(message = 'Loading...') {
+            const overlay = document.getElementById('loading-overlay');
+            if (overlay) {
+                const text = overlay.querySelector('.loading-text');
+                if (text) text.textContent = message;
+                overlay.classList.remove('hidden');
+            }
+        }
+
+        function hideLoading() {
+            const overlay = document.getElementById('loading-overlay');
+            if (overlay) {
+                overlay.classList.add('hidden');
+            }
+        }
 
         function showDeleteModal(id) {
             deletePostId = id;
@@ -233,11 +324,23 @@
 
         function confirmDelete() {
             if (deletePostId !== null) {
-                let blogs = JSON.parse(localStorage.getItem('blogs') || '[]');
-                blogs = blogs.filter(b => b.id !== deletePostId);
-                localStorage.setItem('blogs', JSON.stringify(blogs));
-                closeModal();
-                window.location.reload();
+                console.log('Deleting blog with ID:', deletePostId);
+                showLoading('Deleting blog...');
+                fetch(`${API_URL}/${deletePostId}`, {
+                    method: 'DELETE'
+                })
+                    .then(response => {
+                        console.log('Delete response status:', response.status);
+                        if (!response.ok) throw new Error('Failed to delete post');
+                        closeModal();
+                        loadBlogs();
+                    })
+                    .catch(error => {
+                        console.error('Error deleting post:', error);
+                        hideLoading();
+                        alert('Error deleting post. Please try again.');
+                        closeModal();
+                    });
             }
         }
 
@@ -249,83 +352,18 @@
             window.location.href = `blog-form.html?id=${id}`;
         }
 
-        // Helper function to strip HTML tags for preview if needed
         function stripHtml(html) {
             const temp = document.createElement('div');
             temp.innerHTML = html;
             return temp.textContent || temp.innerText || '';
         }
 
-        // Helper function to create excerpt
         function createExcerpt(html, maxLength = 150) {
             const text = stripHtml(html);
             if (text.length <= maxLength) return text;
             return text.substr(0, maxLength) + '...';
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const blogsContainer = document.getElementById('blogs-container');
-            const noBlogsMessage = document.getElementById('no-blogs-message');
-            const blogs = JSON.parse(localStorage.getItem('blogs') || '[]');
-            const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
-
-            // Close modal when clicking outside of it
-            const modal = document.getElementById('deleteModal');
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-
-            if (blogs.length === 0) {
-                noBlogsMessage.classList.remove('hidden');
-            } else {
-                blogs.reverse().forEach(blog => {
-                    const card = document.createElement('div');
-                    card.className = 'blog-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex flex-col h-full group relative';
-
-                    const imageHtml = blog.image
-                        ? `<div class="h-48 w-full bg-gray-100 overflow-hidden"><img src="${blog.image}" alt="${escapeHtml(blog.title)}" class="w-full h-full object-cover"></div>`
-                        : `<div class="h-48 w-full bg-surface-100 flex items-center justify-center text-text-muted"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div>`;
-
-                    let actionsHtml = '';
-                    if (isAuthenticated) {
-                        actionsHtml = `
-                            <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                                <button onclick="editPost(${blog.id})" class="p-2 bg-white rounded-full shadow-md text-gray-500 hover:text-primary hover:bg-gray-50" title="Edit">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
-                                </button>
-                                <button onclick="deletePost(${blog.id})" class="p-2 bg-white rounded-full shadow-md text-gray-500 hover:text-red-500 hover:bg-red-50" title="Delete">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
-                                </button>
-                            </div>
-                        `;
-                    }
-
-                    // Create the card content container
-                    const contentDiv = document.createElement('div');
-                    contentDiv.className = 'p-6 flex-1 flex flex-col';
-
-                    contentDiv.innerHTML = `
-                        <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-2">${blog.date}</div>
-                        <h3 class="text-xl font-display font-bold text-text-primary mb-3 line-clamp-2">${escapeHtml(blog.title)}</h3>
-                        <div class="blog-content text-text-secondary mb-4"></div>
-                    `;
-
-                    // Set the innerHTML of the blog content div separately
-                    const blogContentDiv = contentDiv.querySelector('.blog-content');
-                    blogContentDiv.innerHTML = blog.description;
-
-                    // Assemble the card
-                    card.innerHTML = imageHtml + actionsHtml;
-                    card.appendChild(contentDiv);
-
-                    blogsContainer.appendChild(card);
-                });
-            }
-        });
-
-        // Helper function to escape HTML in titles to prevent XSS
         function escapeHtml(text) {
             const map = {
                 '&': '&amp;',
@@ -336,6 +374,108 @@
             };
             return text.replace(/[&<>"']/g, m => map[m]);
         }
+
+        function loadBlogs() {
+            const blogsContainer = document.getElementById('blogs-container');
+            const noBlogsMessage = document.getElementById('no-blogs-message');
+            const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
+
+            blogsContainer.innerHTML = '';
+            showLoading('Loading blogs...');
+
+            console.log('Loading blogs from:', API_URL);
+
+            fetch(API_URL)
+                .then(response => {
+                    console.log('Response status:', response.status);
+                    if (!response.ok) {
+                        return response.text().then(text => {
+                            throw new Error(`HTTP ${response.status}: ${text}`);
+                        });
+                    }
+                    return response.json();
+                })
+                .then(blogs => {
+                    console.log('Blogs loaded:', blogs);
+                    hideLoading();
+                    if (blogs.length === 0) {
+                        noBlogsMessage.classList.remove('hidden');
+                    } else {
+                        noBlogsMessage.classList.add('hidden');
+                        blogs.reverse().forEach(blog => {
+                            const card = document.createElement('div');
+                            card.className = 'blog-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm flex flex-col h-full group relative';
+
+                            const imageHtml = blog.image
+                                ? `<div class="h-48 w-full bg-gray-100 overflow-hidden"><img src="${blog.image}" alt="${escapeHtml(blog.title)}" class="w-full h-full object-cover"></div>`
+                                : `<div class="h-48 w-full bg-surface-100 flex items-center justify-center text-text-muted"><svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div>`;
+
+                            let actionsHtml = '';
+                            if (isAuthenticated) {
+                                actionsHtml = `
+                                    <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <button class="edit-btn p-2 bg-white rounded-full shadow-md text-gray-500 hover:text-primary hover:bg-gray-50" title="Edit" data-id="${blog.id}">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+                                        </button>
+                                        <button class="delete-btn p-2 bg-white rounded-full shadow-md text-gray-500 hover:text-red-500 hover:bg-red-50" title="Delete" data-id="${blog.id}">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                                        </button>
+                                    </div>
+                                `;
+                            }
+
+                            const contentDiv = document.createElement('div');
+                            contentDiv.className = 'p-6 flex-1 flex flex-col';
+
+                            contentDiv.innerHTML = `
+                                <div class="text-xs font-semibold uppercase tracking-wider text-primary mb-2">${new Date(blog.created_at).toLocaleDateString()}</div>
+                                <h3 class="text-xl font-display font-bold text-text-primary mb-3 line-clamp-2">${escapeHtml(blog.title)}</h3>
+                                <div class="blog-content text-text-secondary mb-4"></div>
+                            `;
+
+                            const blogContentDiv = contentDiv.querySelector('.blog-content');
+                            blogContentDiv.innerHTML = blog.content;
+
+                            card.innerHTML = imageHtml + actionsHtml;
+                            card.appendChild(contentDiv);
+
+                            blogsContainer.appendChild(card);
+                        });
+
+                        // Add event listeners to delete and edit buttons
+                        document.querySelectorAll('.delete-btn').forEach(btn => {
+                            btn.addEventListener('click', (e) => {
+                                const id = parseInt(btn.getAttribute('data-id'));
+                                console.log('Delete button clicked for blog ID:', id);
+                                deletePost(id);
+                            });
+                        });
+
+                        document.querySelectorAll('.edit-btn').forEach(btn => {
+                            btn.addEventListener('click', (e) => {
+                                const id = parseInt(btn.getAttribute('data-id'));
+                                console.log('Edit button clicked for blog ID:', id);
+                                editPost(id);
+                            });
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading blogs:', error);
+                    hideLoading();
+                    noBlogsMessage.classList.remove('hidden');
+                    noBlogsMessage.innerHTML = '<h3 class="text-xl font-semibold text-text-primary">Error loading posts</h3><p class="text-text-secondary">Please try refreshing the page.</p>';
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('deleteModal');
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
     </script>
     <div id="deleteModal" class="modal hidden">
         <div class="modal-content">
